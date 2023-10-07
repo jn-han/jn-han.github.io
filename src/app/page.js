@@ -58,14 +58,14 @@ export default function Home() {
 
       <section id="education" className="flex min-h-screen w-full flex-col items-center justify-between">
         <div className="mt-24 flex flex-col justify-center items-center">
-          Education Section
+          Currently Under Construction
         </div>
 
       </section>
 
       <section id="contact" className="flex min-h-screen w-full flex-col items-center justify-between">
         <div className="mt-24 flex flex-col justify-center items-center">
-          Contact Section
+          Currently Under Construction
         </div>
       </section>
 
