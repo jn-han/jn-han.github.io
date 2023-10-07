@@ -5,7 +5,7 @@ import { Nunito } from 'next/font/google'
 
 
 export const metadata = {
-  title: 'Joshua Nguyen',
+  title: "Joshua Nguyen's Website",
   description: '',
 }
 
