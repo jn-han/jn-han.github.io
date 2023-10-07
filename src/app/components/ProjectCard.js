@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 const ProjectCard = ({info}) => {
   return (
-    <div className='group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:scale-[101%] transition-all duration-50 ease-linear'>
-        <div className='w-4/6 p-3'>
+    <a href={info.link} className='group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:scale-[101%] transition-all duration-50 ease-linear'>
+        <div className='md:w-4/6 p-3'>
             <p>{info.date}</p>
             <h2 className='text-3xl flex flex-wrap py-1'> 
                 {info.name} 
@@ -32,7 +32,7 @@ const ProjectCard = ({info}) => {
             </div>
         </div>
         
-        <div className=' w-2/6 flex flex-row items-center'>
+        <div className=' w-2/6 flex flex-row items-center '>
             <div className='border-2 border-green rounded-xl overflow-hidden shadow-2xl brightness-90 hover:brightness-100 transition duration-500 ease-in-out 
             h-54'>            
             <Image
@@ -45,7 +45,7 @@ const ProjectCard = ({info}) => {
             </div>
 
         </div>
-    </div>
+    </a>
   )
 }
 

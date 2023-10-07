@@ -13,7 +13,7 @@ const PROJECTS = [
           "Stable Diffusion"
         ],
         src: "/plotgen.png",
-        link: ""
+        link: "https://devpost.com/software/plotgen"
     },
     {
         name: "Kizuna",
@@ -28,13 +28,13 @@ const PROJECTS = [
           "Lens Protocol",
         ],
         src: "/kizuna.png",
-        link: ""
+        link: "https://devpost.com/software/kizuna-gevr8p"
     },
     {
         name: "Inteflow",
         date: "Aug 2023",
         place: "Ignition Hacks",
-        description: "Our web-application was built using React, utilizing React Router to navigate through webpages, and Livepeer's API to allow users to upload content and host livestreams on our videos. For background context, Livepeer describes themselves as a decentralized video infracstucture network.",
+        description: "inteflow is an iOS mobile app designed to streamline your math problem-solving experience. It's your personal problem-solving companion that scans both formula and text-based math problems. Once scanned, inteflow breaks down these problems, offering detailed explanations that guide you to the solution through a chatbot. It also offers a wide range of supplementary resources, curated practice problems and textbooks to aid in reinforcing your understanding.",
         award: '"Best Overall Hack"',
         builtWith: [
           "Swift",
@@ -43,7 +43,7 @@ const PROJECTS = [
           "Open AI",
         ],
         src: "/inteflow.png",
-        link: ""
+        link: "https://devpost.com/software/inteflow"
     }
 ]
 
