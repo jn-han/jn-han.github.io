@@ -13,7 +13,7 @@ const EDUCATION = [
   },
   {
     name: "Langara College",
-    degree: "Associate's Degree in Computer Science",
+    degree: "Associate of Computer Science",
     graduationDate: "2020-2021",
     src: "/langara-logo.png",
     relevantWork: [
