@@ -11,7 +11,7 @@ export default function Home() {
 
   console.log(pathname);
   return (
-    <main className="bg-background overflow-hidden">
+    <main className="bg-background overflow-hidden snap-y">
       <Taskbar></Taskbar>
       <HomePage />
       <ProjectPage />
