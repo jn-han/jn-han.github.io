@@ -30,7 +30,7 @@ const ProjectPage = () => {
               className="link link-underline link-underline-black text-green"
               href="archived"
             >
-              Josh's project archive
+              Josh&apos;s project archive
               <FontAwesomeIcon
                 className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
                 icon={faSquareArrowUpRight}
