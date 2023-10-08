@@ -27,7 +27,7 @@ const Taskbar = () => {
   ];
 
   return (
-    <div className="fixed w-full top-5 z-10 scroll-smooth">
+    <div className="invisible md:visible lg:visible xl:visible 2xl:visible fixed w-full top-5 z-10 scroll-smooth">
       <div className="flex w-full justify-center">
         <div className="flex flex-row text-center justify-evenly fixed bg-foreground w-auto py-2 rounded-full text-green border-2 border-green">
           {navLink.map((item) => {
