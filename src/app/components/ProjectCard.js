@@ -14,7 +14,7 @@ const ProjectCard = ({ info }) => {
         <h2 className="text-3xl flex flex-wrap py-1">
           {info.name}
           <FontAwesomeIcon
-            className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
+            className="w-4 mx-2 group-hover:-translate-y-1 transition duration-200 ease-in-out"
             icon={faSquareArrowUpRight}
           />
         </h2>
@@ -23,12 +23,12 @@ const ProjectCard = ({ info }) => {
         </h3>
         <p className=" py-1">{info.description}</p>
         <div className="flex flex-wrap w-full items-center">
-          <p className="pr-2">Built With: </p>
+          <p className="pr-2 text-green">Built With: </p>
 
           {info.builtWith.map((item, key) => {
             return (
               <p
-                className="px-3 m-1 border-2 border-green rounded-full"
+                className="px-3 m-1 border-2 bg-darkTeal border-darkTeal text-green rounded-full"
                 key={key}
               >
                 {item}
@@ -44,7 +44,7 @@ const ProjectCard = ({ info }) => {
             h-54"
         >
           <Image
-            className="h-full object-top object-cover"
+            className="h-full object-top object-cover group-hover:scale-105 transition duration-50 ease-in-out"
             src={info.src}
             width={1000}
             height={1000}

@@ -14,8 +14,8 @@ const ProjectPage = () => {
         <h2 className="text-green text-5xl">My Projects</h2>
         <FontAwesomeIcon className="w-4 pt-10 " icon={faGripLinesVertical} />
 
-        {PROJECTS.map((item, key) => (
-          <ProjectCard info={item} key={key.name} />
+        {PROJECTS.map((item) => (
+          <ProjectCard info={item} key={item.name} />
         ))}
       </div>
     </section>
