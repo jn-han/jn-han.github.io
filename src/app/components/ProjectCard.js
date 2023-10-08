@@ -28,7 +28,7 @@ const ProjectCard = ({ info }) => {
           {info.builtWith.map((item, key) => {
             return (
               <p
-                className="px-3 m-1 border-2 bg-darkTeal border-darkTeal text-green rounded-full"
+                className="px-3 m-1 bg-darkTeal bg-opacity-50  text-green rounded-full"
                 key={key}
               >
                 {item}

@@ -1,8 +1,12 @@
 import React from "react";
-import { faGripLinesVertical } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGripLinesVertical,
+  faSquareArrowUpRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PROJECTS from "../config/projects-config";
 import ProjectCard from "./ProjectCard";
+import Link from "next/link";
 
 const ProjectPage = () => {
   return (
@@ -19,6 +23,21 @@ const ProjectPage = () => {
         {PROJECTS.map((item) => (
           <ProjectCard info={item} key={item.name} />
         ))}
+        <div className="w-full p-4 text-xl">
+          <div className=" w-fit group">
+            {" "}
+            <Link
+              className="link link-underline link-underline-black text-green"
+              href="archived"
+            >
+              Josh's project archive
+              <FontAwesomeIcon
+                className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
+                icon={faSquareArrowUpRight}
+              />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

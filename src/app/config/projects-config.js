@@ -1,6 +1,6 @@
 const PROJECTS = [
   {
-    name: "Plotgen",
+    name: "plotgen",
     date: "Sept 2023",
     place: "Hack the North",
     description:
@@ -17,7 +17,7 @@ const PROJECTS = [
     link: "https://devpost.com/software/plotgen",
   },
   {
-    name: "Kizuna",
+    name: "kizuna",
     date: "Feb 2023",
     place: "NwHacks",
     description:
@@ -28,7 +28,7 @@ const PROJECTS = [
     link: "https://devpost.com/software/kizuna-gevr8p",
   },
   {
-    name: "Inteflow",
+    name: "inteflow",
     date: "Aug 2023",
     place: "Ignition Hacks",
     description:

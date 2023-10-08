@@ -48,7 +48,7 @@ const HomePage = () => {
       </div>
       <div className="absolute bottom-0 animate-bounce flex flex-col items-center w-full mb-2 text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg text-green">
         <p className="my-3">learn more</p>
-        <FontAwesomeIcon className="w-10 scale-150" icon={faArrowDown} />
+        <FontAwesomeIcon className="w-8 scale-150" icon={faArrowDown} />
       </div>
       <Particle className="absolute" />
     </section>
