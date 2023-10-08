@@ -11,11 +11,13 @@ const page = () => {
           <h2 className=" text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl text-center">
             Hello!
           </h2>
-          <h2>
+          <h2 className="text-center">
             This page is currently under construction. Please come back at
             another time!
           </h2>
-          <Link href="/">click here to go back to the main page</Link>
+          <Link className="text=center" href="/">
+            click here to go back to the main page
+          </Link>
         </div>
       </div>
 
