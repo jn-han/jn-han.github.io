@@ -22,7 +22,7 @@ const Taskbar = () => {
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "#contact",
     },
   ];
 
@@ -33,7 +33,7 @@ const Taskbar = () => {
           {navLink.map((item) => {
             const isActive = pathname.startsWith(item.link);
             return (
-              <Link
+              <a
                 className={` ${
                   isActive ? "bg-white" : "bg-red"
                 } px-4 mx-3 py-1 rounded-full hover:bg-green hover:text-accent transition duration-500 ease-in-out`}
@@ -41,7 +41,7 @@ const Taskbar = () => {
                 href={item.link}
               >
                 {item.name}
-              </Link>
+              </a>
             );
           })}
         </div>
