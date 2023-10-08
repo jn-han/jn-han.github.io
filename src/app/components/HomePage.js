@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className="flex flex-col justify-center items-center text-green">
           <h2 className="text-2xl">Hello! My name is</h2>
           <h1 className="text-6xl">Joshua Nguyen</h1>
-          <h2 className="text-2xl m-4">
+          <h2 className="text-2xl m-4 text-center">
             Software Engineer and Student at the University of British Columbia
           </h2>
           <div className="text-xl flex justify-evenly w-4/5  p-2 text-green">

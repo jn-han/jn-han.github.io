@@ -11,10 +11,14 @@ const EducationCard = ({ info }) => {
       </div>
 
       <div className="w-2/3 p-4">
-        <h2 className="text-xl font-semibold">{info.degree}</h2>
-        <h3>{info.name}</h3>
-        <h3>{info.graduationDate}</h3>
-        <h3></h3>
+        <h2 className="text-xl 2xl:text-3xl font-semibold">{info.degree}</h2>
+        <h3 className="2xl:text-xl">{info.name}</h3>
+        <h3 className="2xl:text-xl">{info.graduationDate}</h3>
+        <ul className="mx-5 list-disc 2xl:text-lg">
+          {info.relevantWork.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

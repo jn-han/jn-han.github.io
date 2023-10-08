@@ -9,7 +9,7 @@ const ProjectCard = ({ info }) => {
       href={info.link}
       className="group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:scale-[101%] transition-all duration-50 ease-linear"
     >
-      <div className="md:w-4/6 p-3">
+      <div className="w-full sm:w-full md:w-full lg:w-4/6 xl:w-4/6 2xl:w-4/6 p-3 ">
         <p>{info.date}</p>
         <h2 className="text-3xl flex flex-wrap py-1">
           {info.name}
@@ -38,13 +38,10 @@ const ProjectCard = ({ info }) => {
         </div>
       </div>
 
-      <div className=" w-2/6 flex flex-row items-center ">
-        <div
-          className="border-2 border-green rounded-xl overflow-hidden shadow-2xl brightness-90 hover:brightness-100 transition duration-500 ease-in-out 
-            h-54"
-        >
+      <div className="w-0 sm:w-0 md:w-0 lg:w-2/6 xl:w-2/6 2xl:w-2/6 flex flex-row items-center invisible sm:invisible md:invisible lg:visible xl:visibe 2xl:visible ">
+        <div className="border-2 border-green rounded-xl overflow-hidden shadow-2xl brightness-90 hover:brightness-100 transition duration-500 ease-in-out h-54 ">
           <Image
-            className="h-full object-top object-cover group-hover:scale-105 transition duration-50 ease-in-out"
+            className="h-full object-top object-cover group-hover:scale-105 transition duration-50 ease-in-out "
             src={info.src}
             width={1000}
             height={1000}
