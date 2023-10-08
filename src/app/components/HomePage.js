@@ -9,8 +9,8 @@ const HomePage = () => {
     <section id="home" className="z-2">
       <div className="absolute w-full h-screen flex justify-center items-center">
         <div className="flex flex-col justify-center items-center text-green">
-          <h2 className="text-2xl">Hello! My name is</h2>
-          <h1 className="text-6xl">Joshua Nguyen</h1>
+          <h2 className="text-2xl text-center">Hello! My name is</h2>
+          <h1 className="text-6xl text-center">Joshua Nguyen</h1>
           <h2 className="text-2xl m-4 text-center">
             Software Engineer and Student at the University of British Columbia
           </h2>
