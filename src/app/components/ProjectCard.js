@@ -7,7 +7,7 @@ const ProjectCard = ({ info }) => {
   return (
     <a
       href={info.link}
-      className="group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] transition-all duration-50 ease-linear"
+      className="group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] transition-all duration-50 ease-linear mx-5 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0"
     >
       <div className="w-full sm:w-full md:w-full lg:w-4/6 xl:w-4/6 2xl:w-4/6 p-3 ">
         <p>{info.date}</p>
