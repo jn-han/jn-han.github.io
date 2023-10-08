@@ -16,7 +16,7 @@ const EducationCard = ({ info }) => {
         <h3 className="2xl:text-xl">{info.graduationDate}</h3>
         <ul className="mx-5 list-disc 2xl:text-lg">
           {info.relevantWork.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
