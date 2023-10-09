@@ -3,7 +3,7 @@ import React from "react";
 const ContactPage = () => {
   return (
     <section
-      id="contact"
+      id="about"
       className="flex min-h-screen w-full flex-col items-center justify-between"
     >
       <div className="mt-24 flex flex-col justify-center items-center">

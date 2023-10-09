@@ -21,8 +21,8 @@ const Taskbar = () => {
       link: "#education",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "About",
+      link: "#about",
     },
   ];
 
