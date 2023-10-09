@@ -5,7 +5,7 @@ const particlesConfig = {
   },
   background: {
     color: {
-      value: "#545F66",
+      value: "#0a192f",
     },
   },
   fpsLimit: 120,
@@ -33,13 +33,13 @@ const particlesConfig = {
   },
   particles: {
     color: {
-      value: "#AAF1DD",
+      value: "#64ffda",
     },
     links: {
-      color: "#AAF1DD",
-      distance: 150,
+      color: "#64ffda",
+      distance: 180,
       enable: true,
-      opacity: 0.3,
+      opacity: 0.4,
       width: 1,
     },
     move: {
@@ -57,7 +57,7 @@ const particlesConfig = {
         enable: true,
         area: 900,
       },
-      value: 70,
+      value: 80,
     },
     opacity: {
       value: 1,
