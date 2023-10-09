@@ -3,6 +3,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Particle from "./Particle";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import particlesConfig from "../config/particles-config";
 
 const HomePage = () => {
   return (
@@ -12,16 +13,16 @@ const HomePage = () => {
           <h2 className=" text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl text-center">
             Hello! My name is
           </h2>
-          <h1 className="text-4xl text-center md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl">
+          <h1 className="text-4xl text-center md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-white">
             Joshua Nguyen
           </h1>
-          <h2 className="text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl m-4 text-center">
+          <h2 className="text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl m-4 text-center text-lightSlate">
             Software Engineer and Student at the University of British Columbia
           </h2>
-          <div className="text-xl flex justify-evenly w-4/5  p-2 text-green">
+          <div className="text-xl flex justify-evenly w-4/5  p-2 text-slate">
             <a
               href="https://github.com/jn-han"
-              className="flex flex-wrap items-center p-3 justify-between bg-accent rounded-full hover:bg-green hover:text-accent transition duration-500 ease-in-out"
+              className="flex flex-wrap items-center p-3 justify-between bg-accent rounded-full hover:text-green transition duration-500 ease-in-out"
             >
               <FontAwesomeIcon
                 icon={faGithub}
@@ -33,7 +34,7 @@ const HomePage = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/jn-han/"
-              className="flex flex-wrap items-center justify-between bg-accent rounded-full p-3 hover:bg-green hover:text-accent transition duration-500 ease-in-out"
+              className="flex flex-wrap items-center justify-between bg-accent rounded-full p-3  hover:text-green transition duration-500 ease-in-out"
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
@@ -50,7 +51,7 @@ const HomePage = () => {
         <p className="my-3">learn more</p>
         <FontAwesomeIcon className="w-8 scale-150" icon={faArrowDown} />
       </div>
-      <Particle className="absolute" />
+      <Particle className="absolute" config={particlesConfig} />
     </section>
   );
 };

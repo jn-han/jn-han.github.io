@@ -14,8 +14,8 @@ const ProjectPage = () => {
       id="projects"
       className="flex min-h-screen w-full flex-col items-center justify-between"
     >
-      <div className="mt-24 p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
-        <h2 className="text-green text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl border-b-2 w-full text-center border-accent pb-5">
+      <div className="mt-24 p-10 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+        <h2 className="text-green text-xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl border-b-2 w-full text-center border-accent pb-5">
           My Projects
         </h2>
         <FontAwesomeIcon
@@ -30,7 +30,7 @@ const ProjectPage = () => {
           <div className=" w-fit group">
             {" "}
             <Link
-              className="link link-underline link-underline-black text-green"
+              className="link link-underline link-underline-black text-white x text-lg"
               href="archived"
             >
               Josh&apos;s project archive
