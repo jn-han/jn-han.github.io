@@ -15,11 +15,11 @@ const ProjectPage = () => {
       className="flex min-h-screen w-full flex-col items-center justify-between"
     >
       <div className="mt-24 p-10 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-2/3 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
-        <h2 className="text-green text-xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl border-b-2 w-full text-center border-accent pb-5">
+        <h2 className="text-green text-xl md:text-4xl lg:text-3xl xl:text-3xl 2xl:text-3xl border-b-2 w-full text-center border-accent pb-5">
           My Projects
         </h2>
         <FontAwesomeIcon
-          className="pt-10 text-accent"
+          className="w-3 pt-10 text-accent"
           icon={faGripLinesVertical}
         />
 
@@ -27,13 +27,12 @@ const ProjectPage = () => {
           <ProjectCard info={item} key={item.name} />
         ))}
         <div className="w-full p-4 text-xl">
-          <div className=" w-fit group">
-            {" "}
+          <div className=" link link-underline link-underline-black w-fit group">
             <Link
-              className="link link-underline link-underline-black text-white x text-lg"
-              href="archived"
+              className=" text-white x text-lg flex flex-row"
+              href="/archived"
             >
-              Josh&apos;s project archive
+              Josh&apos;s Project Archive
               <FontAwesomeIcon
                 className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
                 icon={faSquareArrowUpRight}

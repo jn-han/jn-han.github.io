@@ -29,7 +29,7 @@ const Taskbar = () => {
   return (
     <div className="invisible sm:visible md:visible lg:visible xl:visible 2xl:visible fixed w-full top-5 z-10 scroll-smooth">
       <div className="flex w-full justify-center">
-        <div className="flex flex-row text-center justify-evenly fixed bg-accent w-auto py-2 rounded-full text-white border-2 border-lightSlate">
+        <div className="flex flex-row text-center justify-evenly fixed bg-accent w-auto py-2 rounded-full text-white border border-lightSlate">
           {navLink.map((item) => {
             const isActive = pathname.startsWith(item.link);
             return (

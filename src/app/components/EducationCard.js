@@ -3,9 +3,15 @@ import React from "react";
 
 const EducationCard = ({ info }) => {
   return (
-    <div className="group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:scale-[101%] transition-all duration-50 text-white ease-linear">
+    <div
+      className="group flex flex-row justify-between w-full mt-10 p-5 rounded-md  drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] 
+    hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+    border border-slate
+    hover:bg-lightNavy
+    transition-all duration-50 ease-linear mx-5 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 text-white "
+    >
       <div className="w-1/3 overflow-hidden p-3">
-        <div className="border-2 border-green overflow-hidden rounded-lg">
+        <div className="border border-slate overflow-hidden rounded-lg">
           <Image src={info.src} height={400} width={400} alt="education-logo" />
         </div>
       </div>

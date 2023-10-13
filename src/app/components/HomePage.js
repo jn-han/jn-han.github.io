@@ -24,10 +24,7 @@ const HomePage = () => {
               href="https://github.com/jn-han"
               className="flex flex-wrap items-center p-3 justify-between bg-accent rounded-full hover:text-green transition duration-500 ease-in-out"
             >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className=" scale-110 md:scale-150 lg:scale-150 xl:scale-150 2xl:scale-150 w-8 mx-1"
-              />
+              <FontAwesomeIcon icon={faGithub} className="w-8 mx-1" />
               <p className="mx-1 text-sm md:text-xl lg:text-xl xl:text-xl 2xl:text-xl">
                 GitHub
               </p>
@@ -36,10 +33,7 @@ const HomePage = () => {
               href="https://www.linkedin.com/in/jn-han/"
               className="flex flex-wrap items-center justify-between bg-accent rounded-full p-3  hover:text-green transition duration-500 ease-in-out"
             >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="scale-110 md:scale-150 lg:scale-150 xl:scale-150 2xl:scale-150 w-8 mx-2"
-              />
+              <FontAwesomeIcon icon={faLinkedin} className="w-8 mx-2" />
               <p className="mx-1 text-sm md:text-xl lg:text-xl xl:text-xl 2xl:text-xl">
                 LinkedIn
               </p>
@@ -49,7 +43,10 @@ const HomePage = () => {
       </div>
       <div className="absolute bottom-0 animate-bounce flex flex-col items-center w-full mb-2 text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg text-green">
         <p className="my-3">learn more</p>
-        <FontAwesomeIcon className="w-8 scale-150" icon={faArrowDown} />
+        <FontAwesomeIcon
+          className="w-3 md:w-4 lg:w-4 xl:w-4 scale-150"
+          icon={faArrowDown}
+        />
       </div>
       <Particle className="absolute" config={particlesConfig} />
     </section>

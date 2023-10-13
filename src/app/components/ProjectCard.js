@@ -7,7 +7,11 @@ const ProjectCard = ({ info }) => {
   return (
     <a
       href={info.link}
-      className="group flex flex-row justify-between w-full mt-10 border-2 border-green p-5 rounded-md bg-accent drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] transition-all duration-50 ease-linear mx-5 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 text-white "
+      className="group flex flex-row justify-between w-full mt-10 p-5 rounded-md  drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] 
+      hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+      border border-slate
+      hover:bg-lightNavy
+      transition-all duration-50 ease-linear mx-5 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 text-white "
     >
       <div className="w-full sm:w-full md:w-full lg:w-4/6 xl:w-4/6 2xl:w-4/6 p-3 ">
         <p className="text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-md">
@@ -16,7 +20,7 @@ const ProjectCard = ({ info }) => {
         <h2 className="text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl flex flex-wrap py-1">
           {info.name}
           <FontAwesomeIcon
-            className="w-4 mx-2 group-hover:-translate-y-1 transition duration-200 ease-in-out"
+            className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
             icon={faSquareArrowUpRight}
           />
         </h2>
@@ -43,9 +47,12 @@ const ProjectCard = ({ info }) => {
       </div>
 
       <div className="w-0 sm:w-0 md:w-0 lg:w-2/6 xl:w-2/6 2xl:w-2/6 flex flex-row items-center invisible sm:invisible md:invisible lg:visible xl:visibe 2xl:visible ">
-        <div className="border-2 border-green rounded-xl overflow-hidden shadow-2xl brightness-90 hover:brightness-100 transition duration-500 ease-in-out h-54 ">
+        <div
+          className=" group-hover:-translate-y-2
+        rounded-xl overflow-hidden group-hover:drop-shadow-2xl brightness-90 group-hover:brightness-100 transition duration-200 ease-in-out h-54 "
+        >
           <Image
-            className="h-full object-top object-cover group-hover:scale-105 transition duration-50 ease-in-out "
+            className="h-full object-top object-cover transition duration-50 ease-in-out "
             src={info.src}
             width={1000}
             height={1000}

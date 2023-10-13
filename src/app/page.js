@@ -5,6 +5,9 @@ import ProjectPage from "./components/ProjectPage";
 import EducationPage from "./components/EducationPage";
 import ContactPage from "./components/ContactPage";
 import { usePathname } from "next/navigation";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 export default function Home() {
   const pathname = usePathname();

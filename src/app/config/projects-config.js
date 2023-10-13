@@ -21,7 +21,7 @@ const PROJECTS = [
     date: "Feb 2023",
     place: "NwHacks",
     description:
-      "'kizuna' is a web application developed for communities as a solution to the lack of audience engagement features in common streaming platforms such as YouTube and Twitch. Using both Livepeer and Lens Protocol, our goal was to bring the lens community together to stream, watch, and palyback video on a decentralilzed network. ",
+      "'kizuna' is a web application developed for communities as a solution to the lack of audience engagement features in common streaming platforms such as YouTube and Twitch. Using both Livepeer and Lens Protocol, our goal was to bring the lens community together to stream, watch, and playback video on a decentralilzed network. ",
     award: '"Best Video Application"',
     builtWith: ["React.JS", "CSS", "Livepeer", "Lens Protocol"],
     src: "/kizuna.png",
