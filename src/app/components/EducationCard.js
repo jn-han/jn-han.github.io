@@ -4,11 +4,11 @@ import React from "react";
 const EducationCard = ({ info }) => {
   return (
     <div
-      className="group flex flex-row justify-between w-2/3 mt-10 p-5 rounded-md  drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] 
+      className="group flex flex-row justify-between w-4/5 mt-10 p-5 rounded-md  drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] 
     hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
     border border-slate
     hover:bg-lightNavy
-    transition-all duration-50 ease-linear mx-5 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 text-white "
+    transition-all duration-50 ease-linear mx-5 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0 text-white md:w-4/5 lg:w-1/2 xl:w-1/2 "
     >
       <div className="w-1/3 overflow-hidden p-3">
         <div className="border border-slate overflow-hidden rounded-lg">
