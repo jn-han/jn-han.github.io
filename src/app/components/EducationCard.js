@@ -4,7 +4,7 @@ import React from "react";
 const EducationCard = ({ info }) => {
   return (
     <div
-      className="group flex flex-row justify-between w-full mt-10 p-5 rounded-md  drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] 
+      className="group flex flex-row justify-between w-2/3 mt-10 p-5 rounded-md  drop-shadow-xl hover:drop-shadow-2xl hover:scale-[101%] 
     hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
     border border-slate
     hover:bg-lightNavy

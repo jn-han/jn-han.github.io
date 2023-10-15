@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import {
+  faCode,
+  faEnvelope,
   faGripLinesVertical,
   faSquareArrowUpRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import contactLinks from "../config/contactLinks";
 
 const ContactPage = () => {
   return (
@@ -17,7 +21,7 @@ const ContactPage = () => {
           About Josh
         </h2>
         <div className="w-full mt-4 flex flex-row text-lg">
-          <div className="text-slate w-full text-left">
+          <div className="text-slate w-full text-left p-7">
             <p className="">
               Hello! I&apos;m Josh, and I love to create, build, and tinker with
               different types of technology. My passion for tech began when I
@@ -63,10 +67,10 @@ const ContactPage = () => {
               !
             </p>
           </div>
-          {/* <div className="flex w-1/2 items-center justify-center">
+          <div className="flex w-1/2 flex-col items-start justify-center ml-24">
             <div
-              className="w-1/2 border-2 border-green overflow-hidden aspect-square position-center
-              "
+              className="border-2 border-green overflow-hidden aspect-square position-center rounded-3xl w-3/5
+              m-3"
             >
               <Image
                 src="/mePhoto.jpg"
@@ -75,8 +79,59 @@ const ContactPage = () => {
                 className="object-bottom"
               ></Image>
             </div>
-          </div> */}
+            <div className=" p-3 w-full flex flex-col">
+              <div className="flex flex-row text-slate">
+                <FontAwesomeIcon
+                  className="w-6 mx-2"
+                  icon={faEnvelope}
+                ></FontAwesomeIcon>
+                <div>
+                  <span className="">Email: </span>
+                  <a className="text-white" href={contactLinks.email}>
+                    joshuahnguyen@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-row text-slate">
+                <FontAwesomeIcon
+                  className="w-6 mx-2"
+                  icon={faLinkedin}
+                ></FontAwesomeIcon>
+                <div>
+                  <span className="">LinkedIn: </span>
+                  <a className="text-white" href={contactLinks.linkedin}>
+                    jn-han
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-row text-slate">
+                <FontAwesomeIcon
+                  className="w-6 mx-2"
+                  icon={faGithubSquare}
+                ></FontAwesomeIcon>
+                <div>
+                  <span className="">Github: </span>
+                  <a className="text-white" href={contactLinks.github}>
+                    jn-han
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-row text-slate">
+                <FontAwesomeIcon
+                  className="w-6 mx-2"
+                  icon={faCode}
+                ></FontAwesomeIcon>
+                <div>
+                  <span className="">Devpost: </span>
+                  <a className="text-white" href={contactLinks.devpost}>
+                    jn-han
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        {/* <div className="w-full text-left">Tech I know</div> */}
       </div>
     </section>
   );
