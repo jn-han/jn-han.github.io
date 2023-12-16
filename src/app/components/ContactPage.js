@@ -114,7 +114,7 @@ const ContactPage = () => {
               m-3"
             >
               <Image
-                src="./mePhoto2.jpg"
+                src="/mePhoto2.JPG"
                 width={600}
                 height={600}
                 className="object-bottom"
