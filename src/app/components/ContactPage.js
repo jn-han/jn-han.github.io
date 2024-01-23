@@ -44,7 +44,7 @@ const ContactPage = () => {
                 being a psychology major at the University of British Columbia
               </li>
               <li>playing volleyball</li>
-              <li>Running and owning a small 3D printing business</li>
+              <li>running and owning a small 3D printing business</li>
             </ul>
             <br></br>
             <p>

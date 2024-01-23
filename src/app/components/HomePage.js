@@ -42,7 +42,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="absolute bottom-0 animate-bounce flex flex-col items-center w-full mb-2 text-xs md:text-lg lg:text-lg xl:text-lg 2xl:text-lg text-green">
-        <p className="my-3">learn more</p>
+        <p className="my-3">Learn more</p>
         <FontAwesomeIcon
           className="w-3 md:w-4 lg:w-4 xl:w-4 scale-150"
           icon={faArrowDown}
