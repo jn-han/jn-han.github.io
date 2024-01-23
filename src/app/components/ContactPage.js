@@ -70,8 +70,8 @@ const ContactPage = () => {
               <br />
               <br />
               <p className="text-xl">Tech I have been working with:</p>
-              <div className="border-accent p-2 border-b-2"></div>
-              <div className="flex flex-row w-1/2 text-slate">
+              <div className="w-full border-accent p-2 border-b-2"></div>
+              <div className="flex flex-row w-full text-slate">
                 <ul className="list-square list-inside text-lg m-3 marker:text-slate text-green">
                   <li>JavaScript</li>
                   <li>Java</li>
@@ -79,10 +79,10 @@ const ContactPage = () => {
                   <li>Tailwind CSS</li>
                 </ul>
                 <ul className="list-square list-inside text-lg m-3 marker:text-slate text-green">
-                  <li>HTML</li>
                   <li>Vue</li>
+                  <li>React.js</li>
+                  <li>HTML</li>
                   <li>Next.js</li>
-                  <li>React</li>
                 </ul>
               </div>
             </div>
