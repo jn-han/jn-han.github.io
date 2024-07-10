@@ -18,7 +18,6 @@ export default function Home() {
       <Taskbar></Taskbar>
       <HomePage />
       <ProjectPage />
-      <EducationPage />
       <ContactPage />
     </main>
   );

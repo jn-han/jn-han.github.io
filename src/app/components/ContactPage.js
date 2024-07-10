@@ -146,17 +146,16 @@ const ContactPage = () => {
                   icon={faLinkedin}
                 ></FontAwesomeIcon>
                 <div className="flex flex-row text-slate group">
-                  <span className="">LinkedIn: </span>
+                  <span className="">LinkedIn </span>
                   <a
                     className="text-white ml-1 flex flex-row"
                     href={contactLinks.linkedin}
                   >
-                    jn-han
+                    <FontAwesomeIcon
+                      className="w-4 mx-2 group-hover:-translate-y-0.5 text-white transition duration-200 ease-in-out"
+                      icon={faSquareArrowUpRight}
+                    />
                   </a>
-                  <FontAwesomeIcon
-                    className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
-                    icon={faSquareArrowUpRight}
-                  />
                 </div>
               </div>
               <div className="flex flex-row text-slate mt-2 group">
@@ -165,12 +164,11 @@ const ContactPage = () => {
                   icon={faGithubSquare}
                 ></FontAwesomeIcon>
                 <div className="flex flex-row text-slate group">
-                  <span className="">Github: </span>
+                  <span className="">Github </span>
                   <a
                     className="text-white ml-1 flex flex-row"
                     href={contactLinks.github}
                   >
-                    jn-han
                     <FontAwesomeIcon
                       className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
                       icon={faSquareArrowUpRight}
@@ -184,12 +182,11 @@ const ContactPage = () => {
                   icon={faCode}
                 ></FontAwesomeIcon>
                 <div className="flex flex-row text-slate">
-                  <span className="">Devpost: </span>
+                  <span className="">Devpost </span>
                   <a
                     className="text-white ml-1 flex flex-row"
                     href={contactLinks.devpost}
                   >
-                    jn-han
                     <FontAwesomeIcon
                       className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
                       icon={faSquareArrowUpRight}
