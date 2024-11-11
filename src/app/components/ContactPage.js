@@ -16,7 +16,7 @@ const ContactPage = () => {
       id="about"
       className="flex min-h-screen w-full flex-col items-center justify-between"
     >
-      <div className="mt-24 p-10 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-3/4  lg:w-3/4 xl:w-3/4 2xl:w-3/4">
+      <div className="mt-10 p-10 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-3/4  lg:w-3/4 xl:w-3/4 2xl:w-3/4">
         <h2 className="text-green text-xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-3xl border-b-2 w-full text-center border-accent pb-5">
           About
         </h2>
@@ -146,17 +146,16 @@ const ContactPage = () => {
                   icon={faLinkedin}
                 ></FontAwesomeIcon>
                 <div className="flex flex-row text-slate group">
-                  <span className="">LinkedIn: </span>
+                  <span className="">LinkedIn </span>
                   <a
                     className="text-white ml-1 flex flex-row"
                     href={contactLinks.linkedin}
                   >
-                    jn-han
+                    <FontAwesomeIcon
+                      className="w-4 mx-2 group-hover:-translate-y-0.5 text-white transition duration-200 ease-in-out"
+                      icon={faSquareArrowUpRight}
+                    />
                   </a>
-                  <FontAwesomeIcon
-                    className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
-                    icon={faSquareArrowUpRight}
-                  />
                 </div>
               </div>
               <div className="flex flex-row text-slate mt-2 group">
@@ -165,12 +164,11 @@ const ContactPage = () => {
                   icon={faGithubSquare}
                 ></FontAwesomeIcon>
                 <div className="flex flex-row text-slate group">
-                  <span className="">Github: </span>
+                  <span className="">Github </span>
                   <a
                     className="text-white ml-1 flex flex-row"
                     href={contactLinks.github}
                   >
-                    jn-han
                     <FontAwesomeIcon
                       className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
                       icon={faSquareArrowUpRight}
@@ -184,12 +182,11 @@ const ContactPage = () => {
                   icon={faCode}
                 ></FontAwesomeIcon>
                 <div className="flex flex-row text-slate">
-                  <span className="">Devpost: </span>
+                  <span className="">Devpost </span>
                   <a
                     className="text-white ml-1 flex flex-row"
                     href={contactLinks.devpost}
                   >
-                    jn-han
                     <FontAwesomeIcon
                       className="w-4 mx-2 group-hover:-translate-y-0.5 transition duration-200 ease-in-out"
                       icon={faSquareArrowUpRight}

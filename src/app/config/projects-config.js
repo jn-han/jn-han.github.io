@@ -23,7 +23,14 @@ const PROJECTS = [
     description:
       "'kizuna' is a web application developed for communities as a solution to the lack of audience engagement features in common streaming platforms such as YouTube and Twitch. Using both Livepeer and Lens Protocol, our goal was to bring the lens community together to stream, watch, and playback video on a decentralilzed network. ",
     award: '"Best Video Application"',
-    builtWith: ["React.JS", "CSS", "Livepeer", "Lens Protocol"],
+    builtWith: [
+      "React.JS",
+      "CSS",
+      "Livepeer",
+      "Lens Protocol",
+      "Decentralized Tech",
+      "LPT",
+    ],
     src: "/kizuna.png",
     link: "https://devpost.com/software/kizuna-gevr8p",
   },
@@ -34,7 +41,7 @@ const PROJECTS = [
     description:
       "'inteflow' is an iOS mobile app designed to streamline your math problem-solving experience. It's your personal problem-solving companion that scans both formula and text-based math problems. Once scanned, inteflow breaks down these problems, offering detailed explanations that guide you to the solution through a chatbot. It also offers a wide range of supplementary resources, curated practice problems and textbooks to aid in reinforcing your understanding.",
     award: "Finalist",
-    builtWith: ["Swift", "SwiftUI", "Xcode", "Open AI"],
+    builtWith: ["Swift", "SwiftUI", "Xcode", "OpenAI"],
     src: "/inteflow.png",
     link: "https://devpost.com/software/inteflow",
   },
