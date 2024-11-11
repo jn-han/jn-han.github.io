@@ -17,17 +17,13 @@ const Taskbar = () => {
       link: "#projects",
     },
     {
-      name: "Education",
-      link: "#education",
-    },
-    {
       name: "About",
       link: "#about",
     },
   ];
 
   return (
-    <div className="invisible sm:visible md:visible lg:visible xl:visible 2xl:visible fixed w-full top-5 z-10 scroll-smooth">
+    <div className="invisible sm:visible md:visible lg:visible xl:visible 2xl:visible fixed w-full top-5 z-10 scroll-smooth drop-shadow-2xl">
       <div className="flex w-full justify-center">
         <div className="flex flex-row text-center justify-evenly fixed bg-accent w-auto py-2 rounded-full text-white border border-lightSlate">
           {navLink.map((item) => {

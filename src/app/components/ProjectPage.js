@@ -14,14 +14,10 @@ const ProjectPage = () => {
       id="projects"
       className="flex min-h-screen w-full flex-col items-center justify-between"
     >
-      <div className="mt-24 p-10 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-3/5 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+      <div className="mt-24 p-10 md:p-0 lg:p-0 xl:p-0 2xl:p-0 flex flex-col justify-center items-center text-green w-full md:w-4/5 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
         <h2 className="text-green text-xl md:text-4xl lg:text-3xl xl:text-3xl 2xl:text-3xl border-b-2 w-full text-center border-accent pb-5">
-          My Projects
+          Projects
         </h2>
-        <FontAwesomeIcon
-          className="w-3 pt-10 text-accent"
-          icon={faGripLinesVertical}
-        />
 
         {PROJECTS.map((item) => (
           <ProjectCard info={item} key={item.name} />
