@@ -23,65 +23,58 @@ const ContactPage = () => {
         <div className="w-full mt-4 flex flex-col lg:flex-row xl:flex-row 2xl:flex-row text-lg items-center">
           <div className="text-slate w-full text-left p-7">
             <p className="">
-              Hello! I&apos;m Josh, and I love to create, build, and tinker with
-              different types of technology. My passion for tech began when I
-              built my first computer at the age of 12. Since then, I knew that
-              I wanted to pursue a lifelong career in technology.
+              Hey there! I&apos;m Josh – a tech enthusiast who thrives on
+              creativity, innovation, and turning ideas into impactful
+              solutions.
               <br />
               <br />
-              Now, in the present day, I discover new types of technology
-              through:
+              I’m currently part of the UBC Biomedical Engineering Student Team,
+              where I collaborate on designing impactful biomedical technology
+              to assist individuals with neurological disabilities. It’s a role
+              that perfectly blends my passion for problem-solving with my drive
+              to create meaningful change in people’s lives through my
+              programming skills.
+              <br />
+              <br />
             </p>
-            <ul className="list-square list-inside">
-              <li>engaging in hackathons</li>
-              <li>talking with people from the tech industry</li>
-              <li>creating applications that help the people around me</li>
-            </ul>
-            <br />
-            <p>My life outside tech consists of:</p>
-            <ul className="list-square list-inside">
-              <li>
-                being a psychology major at the University of British Columbia
-              </li>
-              <li>playing volleyball</li>
-              <li>running and owning a small 3D printing business</li>
-            </ul>
-            <br></br>
+
             <p>
-              No matter what, I am always open to new opportunities and
-              experiences! If you would like to chat, please feel free to email
-              me,&nbsp;
+              I’m always on the lookout for exciting opportunities, inspiring
+              conversations, and the chance to build something amazing. Let’s
+              connect! Drop me an email, say hi on{" "}
               <a
                 className="text-green underline"
                 href="https://linkedin.com/in/jn-han"
               >
-                connect on LinkedIn
+                LinkedIn
               </a>
-              , or&nbsp;
+              , or grab a{" "}
               <a
                 className="text-green underline"
                 href="https://calendly.com/joshuahnguyen/30min"
               >
-                schedule a coffee chat with me
-              </a>
-              !
+                coffee
+              </a>{" "}
+              (virtually or in person).
             </p>
             <div className="w-full text-left">
               <br />
               <br />
-              <p className="text-xl">Tech I have been working with:</p>
+              <p className="text-lg text-green md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl">
+                Tech I have been working with:
+              </p>
               <div className="w-full border-accent p-2 border-b-2"></div>
               <div className="flex flex-row w-full text-slate">
-                <ul className="list-square list-inside text-lg m-3 marker:text-slate text-green">
+                <ul className="list-square list-inside text-lg m-3 marker:text-slate text-white">
                   <li>JavaScript</li>
                   <li>Java</li>
-                  <li>CSS</li>
+                  <li>Flutter</li>
                   <li>Tailwind CSS</li>
                 </ul>
-                <ul className="list-square list-inside text-lg m-3 marker:text-slate text-green">
-                  <li>Vue</li>
+                <ul className="list-square list-inside text-lg m-3 marker:text-slate text-white">
+                  <li>MongoDB</li>
+                  <li>AWS</li>
                   <li>React.js</li>
-                  <li>HTML</li>
                   <li>Next.js</li>
                 </ul>
               </div>
@@ -108,7 +101,7 @@ const ContactPage = () => {
               </Link>
             </div>
           </div>
-          <div className="flex w-full flex-col lg:ml-24 xl:ml-24 2xl:ml-24 lg:items-center">
+          <div className="flex w-full flex-col lg:ml-24 xl:ml-24 2xl:ml-24 items-start">
             <div
               className="border-2 border-green overflow-hidden aspect-square position-fit rounded-3xl w-3/5
               m-3"
