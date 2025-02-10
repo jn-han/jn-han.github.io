@@ -10,7 +10,7 @@ export const metadata = {
     url: "https://joshuanguyen.ca/",
     images: [
       {
-        url: "https://joshuanguyen.ca/assets/web_preview.png",
+        url: "https://joshuanguyen.ca/web_preview.png",
         width: 1200,
         height: 630,
         alt: "Joshua Nguyen's Website Preview",
