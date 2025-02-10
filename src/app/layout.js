@@ -4,6 +4,19 @@ import { Inter } from "next/font/google";
 export const metadata = {
   title: "Joshua Nguyen's Website",
   description: "",
+  openGraph: {
+    title: "Joshua Nguyen's Website",
+    description: "Explore my projects and blog posts.",
+    url: "https://joshuanguyen.ca/",
+    images: [
+      {
+        url: "/assets/web_preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Joshua Nguyen's Website Preview",
+      },
+    ],
+  },
 };
 const inter = Inter({
   subsets: ["latin"],
