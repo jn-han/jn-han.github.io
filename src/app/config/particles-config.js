@@ -5,7 +5,7 @@ const particlesConfig = {
   },
   background: {
     color: {
-      value: "#0a192f",
+      value: "#2E3440",
     },
   },
   fpsLimit: 120,
@@ -55,7 +55,7 @@ const particlesConfig = {
     number: {
       density: {
         enable: true,
-        area: 900,
+        area: 1000,
       },
       value: 80,
     },
