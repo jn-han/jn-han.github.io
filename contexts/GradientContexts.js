@@ -29,9 +29,9 @@ export function GradientProvider({ children }) {
   }, []);
 
   const gradientStyle = {
-    background: `radial-gradient(500px at ${mousePos.x}px ${
+    background: `radial-gradient(800px at ${mousePos.x}px ${
       mousePos.y + scrollY
-    }px, ${darkMode ? "rgba(29, 78, 216, 0.15)" : "#bcc0cc"}, transparent 40%)`,
+    }px, ${darkMode ? "rgba(29, 78, 216, 0.15)" : "#bcc0cc"}, transparent 30%)`,
   };
 
   return (

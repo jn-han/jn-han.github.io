@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import contactLinks from "../config/contactLinks";
 import Link from "next/link";
+import AboutNav from "./AboutNav";
 
 const ContactPage = () => {
   return (
@@ -23,7 +24,8 @@ const ContactPage = () => {
 
         <div className="flex flex-row w-full justify-evenly ">
           <div className="flex pt-6 flex-col justify-between w-1/2">
-            <div className="text-white w-full text-left">
+            <AboutNav />
+            {/* <div className="text-white w-full text-left">
               <p>
                 Hello! I'm Josh, and I love to create, build, and tinker with
                 different types of technology.
@@ -46,7 +48,7 @@ const ContactPage = () => {
                   schedule a coffee chat with me!
                 </a>
               </p>
-            </div>
+            </div> */}
 
             <div className="mt-2 space-y-2">
               <Link
@@ -90,7 +92,7 @@ const ContactPage = () => {
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   size="xl"
-                  className=" mx-2 hover:text-green dark:hover:text-white hover:-translate-y-0.5 transition duration-200 ease-in-out"
+                  className=" mx-2 hover:text-green dark:hover:text-green hover:-translate-y-0.5 transition duration-200 ease-in-out"
                 />
               </a>
 
@@ -101,7 +103,7 @@ const ContactPage = () => {
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   size="xl"
-                  className=" mx-2 hover:text-green dark:hover:text-white hover:-translate-y-0.5 transition duration-200 ease-in-out"
+                  className=" mx-2 hover:text-green dark:hover:text-green hover:-translate-y-0.5 transition duration-200 ease-in-out"
                 />
               </a>
 
@@ -112,7 +114,7 @@ const ContactPage = () => {
                 <FontAwesomeIcon
                   icon={faGithubSquare}
                   size="xl"
-                  className="mx-2 hover:text-green dark:hover:text-white hover:-translate-y-0.5 transition duration-200 ease-in-out"
+                  className="mx-2 hover:text-green dark:hover:text-green hover:-translate-y-0.5 transition duration-200 ease-in-out"
                 />
               </a>
 
@@ -123,7 +125,7 @@ const ContactPage = () => {
                 <FontAwesomeIcon
                   icon={faCode}
                   size="xl"
-                  className=" mx-2 hover:text-green dark:hover:text-white  hover:-translate-y-0.5 transition duration-200 ease-in-out"
+                  className=" mx-2 hover:text-green dark:hover:text-green hover:-translate-y-0.5 transition duration-200 ease-in-out"
                 />
               </a>
             </div>
