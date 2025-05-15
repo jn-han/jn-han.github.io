@@ -13,7 +13,7 @@ const PROJECTS = [
       "BentoML",
       "Stable Diffusion",
     ],
-    src: "/plotgen.png",
+    src: "/plotgen.jpeg",
     link: "https://devpost.com/software/plotgen",
   },
   {
@@ -31,7 +31,7 @@ const PROJECTS = [
       "Decentralized Tech",
       "LPT",
     ],
-    src: "/kizuna.png",
+    src: "/kizuna.jpeg",
     link: "https://devpost.com/software/kizuna-gevr8p",
   },
   {
@@ -42,7 +42,7 @@ const PROJECTS = [
       "'inteflow' is an iOS mobile app designed to streamline your math problem-solving experience. It's your personal problem-solving companion that scans both formula and text-based math problems. Once scanned, inteflow breaks down these problems, offering detailed explanations that guide you to the solution through a chatbot. It also offers a wide range of supplementary resources, curated practice problems and textbooks to aid in reinforcing your understanding.",
     award: "Finalist",
     builtWith: ["Swift", "SwiftUI", "Xcode", "OpenAI"],
-    src: "/inteflow.png",
+    src: "/inteflow.jpeg",
     link: "https://devpost.com/software/inteflow",
   },
 ];

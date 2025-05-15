@@ -1,38 +1,29 @@
+import { DarkModeProvider } from "../../contexts/DarkModeContexts";
+import { GradientProvider } from "../../contexts/GradientContexts";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 
 export const metadata = {
   title: "Joshua Nguyen's Website",
-  description: "Explore my projects and blog posts.",
-  openGraph: {
-    title: "Joshua Nguyen's Website",
-    description: "Explore my projects and blog posts.",
-    url: "https://joshuanguyen.ca/",
-    images: [
-      {
-        url: "https://joshuanguyen.ca/web_preview.png",
-        width: 1200,
-        height: 630,
-        alt: "Joshua Nguyen's Website Preview",
-      },
-    ],
-    type: "website",
-  },
+  description: "",
 };
-
-const inter = Inter({
+const nunito = Nunito({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-nunito",
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} font-sans font-light scroll-smooth`}
-    >
+    <html lang="en" className={`${nunito.variable} font-sans scroll-smooth`}>
       <link rel="icon" href="/favicon/favicon.ico" />
-      <body>{children}</body>
+
+      <body>
+        <DarkModeProvider>
+          <GradientProvider>{children}</GradientProvider>
+        </DarkModeProvider>
+      </body>
     </html>
   );
 }

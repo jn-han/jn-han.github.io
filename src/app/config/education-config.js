@@ -2,14 +2,15 @@ const EDUCATION = [
   {
     name: "University of British Columbia",
     degree: "Bachelor of Arts, Psychology",
-    graduationDate: "2021-2025",
+    graduationDate: "2021-2026",
     src: "/ubc-logo.png",
     relevantWork: [
-      "Computations, Programs, Programming",
       "Models of Computation",
       "Software Construction",
       "Object Oriented Programming",
+      "Human Computer Interactions",
     ],
+    link: "https://www.ubc.ca/about/",
   },
   {
     name: "Langara College",
@@ -21,6 +22,7 @@ const EDUCATION = [
       "Computer hardware, programming, and ethics",
       "Object Oriented Computing",
     ],
+    link: "https://langara.ca/about-langara/index.html",
   },
 ];
 

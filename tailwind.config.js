@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -27,6 +28,18 @@ module.exports = {
         slate: "#a8b2d1",
         lightNavy: "#112240",
       },
+      // colors: {
+      //   background: "#0a192f",
+      //   foreground: "#829399",
+      //   accent: "#233554",
+      //   blue: "#8EC9ED",
+      //   green: "#64ffda",
+      //   darkTeal: "#42B896",
+      //   white: "#e6f1ff",
+      //   lightSlate: "#ccd6f6",
+      //   slate: "#a8b2d1",
+      //   lightNavy: "#112240",
+      // },
       listStyleType: {
         none: "none",
         disc: "disc",
@@ -35,6 +48,18 @@ module.exports = {
         roman: "upper-roman",
         arrow: "arrow",
       },
+    },
+    variants: {
+      extend: {
+        backgroundColor: ["dark"],
+        textColor: ["dark"],
+      },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ["dark"],
+      textColor: ["dark"],
     },
   },
   plugins: [],
