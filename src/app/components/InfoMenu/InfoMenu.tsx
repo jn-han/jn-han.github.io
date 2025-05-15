@@ -3,9 +3,9 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { ScrollMenu } from "./ScrollMenu";
-import { ExperiencePage } from "./ExperiencePage/page";
-import { EducationPage } from "./EducationPage/page";
-import { ProjectPage } from "./ProjectPage/page";
+import { ExperiencePage } from "./ExperiencePage";
+import { EducationPage } from "./EducationPage";
+import { ProjectPage } from "./ProjectPage";
 import {
   sectionIds,
   SectionId,

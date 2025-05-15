@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import EDUCATION from "../../../config/education-config";
+import EDUCATION from "../../config/education-config";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -50 },

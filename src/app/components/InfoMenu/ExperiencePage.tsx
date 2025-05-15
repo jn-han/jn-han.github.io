@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { rightItemVariants } from "../../../types/variants";
+import { rightItemVariants } from "../../types/variants";
 
 const EXPERIENCE = [
   {

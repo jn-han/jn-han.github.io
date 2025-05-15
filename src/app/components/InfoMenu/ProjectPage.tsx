@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import PROJECTS from "../../../config/projects-config";
+import PROJECTS from "../../config/projects-config";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -50 },

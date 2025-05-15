@@ -6,7 +6,7 @@ import {
   menuItemVariants,
   sectionIds,
   SectionId,
-} from "../../../types/variants";
+} from "../../types/variants";
 
 interface Props {
   refs: Record<SectionId, React.RefObject<HTMLDivElement>>;
