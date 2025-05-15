@@ -1,28 +1,21 @@
 "use client";
 import { React, useState } from "react";
-import Particle from "../components/Particle";
 import Link from "next/link";
-import particlesConfig from "../config/particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 import PROJECTS from "../config/allProjects-config";
-import { useGradient } from "../../../contexts/GradientContexts";
+// import { useGradient } from "../../../contexts/GradientContexts";
 
 const page = () => {
-  const { gradientStyle } = useGradient();
+  // const { gradientStyle } = useGradient();
 
   return (
     <div className="bg-background relative h-screen w-screen">
       {/* Apply gradient overlay separately */}
       <div
-        style={gradientStyle}
+        // style={gradientStyle}
         className="absolute inset-0 pointer-events-none transition-all duration-100"
       />
-
-      {/* Particles background */}
-      <div className="absolute inset-0 -z-10">
-        <Particle particlesConfig={particlesConfig} />
-      </div>
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
@@ -30,7 +23,7 @@ const page = () => {
           <Link href="/#projects" className="text-green hover:text-lightGreen">
             Go Back
           </Link>
-          <h1 className="text-3xl text-green">Josh's Project Archive</h1>
+          <h1 className="text-3xl text-green">Josh&apos;s Project Archive</h1>
         </div>
 
         <table className="border-separate border-spacing-4 text-left w-[95%]">

@@ -1,29 +1,32 @@
+// src/app/components/InfoMenu/InfoMenu.tsx
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { ScrollMenu } from "./ScrollMenu";
 import { ExperiencePage } from "./ExperiencePage/page";
 import { EducationPage } from "./EducationPage/page";
 import { ProjectPage } from "./ProjectPage/page";
-import { sectionIds, SectionId } from "../../types/variants";
-import { useActiveSection } from "./ActiveSectionManager/types";
 import {
+  sectionIds,
+  SectionId,
   rightContainerVariants,
   rightItemVariants,
 } from "../../types/variants";
+import { useActiveSection } from "./ActiveSectionManager/types";
 
 export function InfoMenu() {
-  // Refs for each section
+  const expRef = useRef<HTMLDivElement>(null);
+  const eduRef = useRef<HTMLDivElement>(null);
+  const projRef = useRef<HTMLDivElement>(null);
+
   const refs: Record<SectionId, React.RefObject<HTMLDivElement>> = {
-    Experience: useRef<HTMLDivElement>(null),
-    Education: useRef<HTMLDivElement>(null),
-    Projects: useRef<HTMLDivElement>(null),
+    Experience: expRef,
+    Education: eduRef,
+    Projects: projRef,
   };
 
-  // Track which section is in view
-  const activeSection = useActiveSection(refs);
+  const activeSection = useActiveSection(expRef, eduRef, projRef);
 
-  // Smooth scroll helper
   const scrollTo = (id: SectionId) => {
     refs[id].current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -34,7 +37,7 @@ export function InfoMenu() {
       className="flex flex-col lg:flex-row w-full items-start justify-between
                  px-6 lg:px-44 pt-32 pb-10 min-h-screen"
     >
-      {/* Left Sticky Menu (hidden under lg) */}
+      {/* Left Sticky Menu */}
       <ScrollMenu refs={refs} active={activeSection} onSelect={scrollTo} />
 
       {/* Right Content Area */}
