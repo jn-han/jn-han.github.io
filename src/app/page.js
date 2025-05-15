@@ -3,14 +3,14 @@ import Taskbar from "./components/Taskbar";
 import HomePage from "./components/HomePage/HomePage";
 import { InfoMenu } from "./components/InfoMenu/page";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { useGradient } from "../../contexts/GradientContexts";
+// import { useGradient } from "../../contexts/GradientContexts";
 import { useDarkMode } from "../../contexts/DarkModeContexts";
 
 config.autoAddCss = false;
 
 export default function Home() {
   const { darkMode, setDarkMode } = useDarkMode();
-  const { gradientStyle } = useGradient();
+  // const { gradientStyle } = useGradient();
 
   return (
     <div className={darkMode ? "dark" : ""}>

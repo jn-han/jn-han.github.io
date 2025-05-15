@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import Particle from "../components/Particle";
 import Link from "next/link";
-import particlesConfig from "../config/particles-config";
 
 const page = () => {
   return (
@@ -21,8 +19,6 @@ const page = () => {
           </Link>
         </div>
       </div>
-
-      <Particle config={particlesConfig}></Particle>
     </div>
   );
 };
