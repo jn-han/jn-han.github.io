@@ -1,9 +1,7 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Particle from "./Particle";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import particlesConfig from "../config/particles-config";
 
 const HomePage = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
