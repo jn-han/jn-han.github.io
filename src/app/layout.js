@@ -16,7 +16,7 @@ const nunito = Nunito({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${nunito.variable} font-sans scroll-smooth`}>
+    <html lang="en" className={`${nunito.className} scroll-smooth`}>
       <link rel="icon" href="/favicon/favicon.ico" />
 
       <body>
