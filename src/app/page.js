@@ -1,24 +1,30 @@
 "use client";
 import Taskbar from "./components/Taskbar";
-import HomePage from "./components/HomePage";
-import ProjectPage from "./components/ProjectPage";
-import EducationPage from "./components/EducationPage";
-import ContactPage from "./components/ContactPage";
-import { usePathname } from "next/navigation";
+import HomePage from "./components/HomePage/HomePage";
+import { InfoMenu } from "./components/InfoMenu/page";
 import { config } from "@fortawesome/fontawesome-svg-core";
+// import { useGradient } from "../../contexts/GradientContexts";
+import { useDarkMode } from "../../contexts/DarkModeContexts";
 
 config.autoAddCss = false;
 
 export default function Home() {
-  const pathname = usePathname();
+  const { darkMode, setDarkMode } = useDarkMode();
+  // const { gradientStyle } = useGradient();
 
-  console.log(pathname);
   return (
-    <main className="bg-background overflow-hidden snap-y">
-      <Taskbar></Taskbar>
-      <HomePage />
-      <ProjectPage />
-      <ContactPage />
-    </main>
+    <div className={darkMode ? "dark" : ""}>
+      <main className="relative bg-background snap-y">
+        <div
+          // style={gradientStyle}
+          className="absolute inset-0 pointer-events-none transition-all duration-100"
+        />
+
+        <div className="relative z-10">
+          <HomePage />
+          <InfoMenu />
+        </div>
+      </main>
+    </div>
   );
 }

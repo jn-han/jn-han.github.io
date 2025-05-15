@@ -1,5 +1,6 @@
 name: Build & Deploy to GitHub Pages
 
+# Trigger on pushes to main (or change the branch name as needed)
 on:
   push:
     branches:
@@ -25,15 +26,12 @@ jobs:
         run: |
           npm run build
           npm run export
-        # Make sure your package.json has:
-        #   "build": "next build"
-        #   "export": "next export"
-        # so that `out/` is generated.
+        # By default `next export` writes static files to `out/`
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload Pages artifact
+      - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: out
