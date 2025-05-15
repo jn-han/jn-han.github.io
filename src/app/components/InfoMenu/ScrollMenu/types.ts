@@ -1,4 +1,4 @@
-import { SectionId } from "@/app/types/variants";
+import { SectionId } from "../../../types/variants";
 
 export interface ScrollMenuProps {
   refs: Record<SectionId, React.RefObject<HTMLDivElement>>;
