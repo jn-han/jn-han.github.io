@@ -1,4 +1,12 @@
-export default EXPERIENCE = [
+const EXPERIENCE: {
+  company: string;
+  title?: string;
+  location?: string;
+  date: string;
+  responsibilities?: string[];
+  skills?: string[];
+  link: string;
+}[] = [
   {
     company: "BC Cancer",
     title: "Software Developer + Research Assistant",
@@ -47,3 +55,5 @@ export default EXPERIENCE = [
     link: "https://www.linkedin.com/company/ubcbest/?originalSubdomain=ca",
   },
 ];
+
+export default EXPERIENCE;
