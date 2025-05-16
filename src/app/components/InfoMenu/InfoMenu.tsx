@@ -1,12 +1,10 @@
-// src/app/components/InfoMenu/InfoMenu.tsx
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ScrollMenu } from "./ScrollMenu";
 import { ExperiencePage } from "./ExperiencePage";
 import { EducationPage } from "./EducationPage";
 import { ProjectPage } from "./ProjectPage";
-
 import {
   sectionIds,
   SectionId,
@@ -15,17 +13,34 @@ import {
 } from "../../types/variants";
 import { useActiveSection } from "./ActiveSectionManager/types";
 
+// Hook to detect if screen is large (lg: 1024px)
+function useIsLgUp() {
+  const [isLgUp, setIsLgUp] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsLgUp(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  return isLgUp;
+}
+
 export function InfoMenu() {
   const expRef = useRef<HTMLDivElement>(null);
   const eduRef = useRef<HTMLDivElement>(null);
   const projRef = useRef<HTMLDivElement>(null);
+
   const inViewExp = useInView(expRef, { amount: 0.5 });
   const inViewEdu = useInView(eduRef, { amount: 0.5 });
   const inViewProj = useInView(projRef, { amount: 0.5 });
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const isLgUp = useIsLgUp();
 
+  const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
   const refs: Record<SectionId, React.RefObject<HTMLDivElement>> = {
     Experience: expRef,
     Education: eduRef,
@@ -42,9 +57,9 @@ export function InfoMenu() {
     <section
       id="projects"
       className="flex flex-col lg:flex-row w-full items-start justify-between
-             px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 pt-8 sm:pt-10 lg:pt-32 pb-20"
+                 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 pt-8 sm:pt-10 lg:pt-32 pb-20"
     >
-      {/* Mobile header (shows only on small screens) */}
+      {/* Mobile header */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -58,12 +73,12 @@ export function InfoMenu() {
         </p>
       </motion.div>
 
-      {/* Left sticky menu (hidden on small screens) */}
+      {/* Left sticky nav for large screens */}
       <div className="hidden lg:sticky lg:top-32 lg:block lg:w-1/4">
         <ScrollMenu refs={refs} active={activeSection} onSelect={scrollTo} />
       </div>
 
-      {/* Right Content Area */}
+      {/* Right content area */}
       <motion.div
         className="w-full lg:w-4/6 text-white flex flex-col pr-0 lg:pr-4 gap-24 mt-10 lg:mt-0"
         variants={rightContainerVariants}
@@ -71,16 +86,18 @@ export function InfoMenu() {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
+        {/* Experience */}
         <motion.div
           ref={expRef}
           variants={rightItemVariants}
           initial="hidden"
-          animate={inViewExp ? "visible" : "hidden"}
-          className="lg:scroll-mt-32"
+          animate={isLgUp ? (inViewExp ? "visible" : "hidden") : "visible"}
+          className="scroll-mt-32"
         >
-          <ExperiencePage inView={inViewExp} />
+          <ExperiencePage inView={isLgUp ? inViewExp : true} />
         </motion.div>
 
+        {/* Education */}
         <motion.div
           ref={eduRef}
           variants={rightItemVariants}
@@ -91,6 +108,7 @@ export function InfoMenu() {
           <EducationPage inView={inViewEdu} />
         </motion.div>
 
+        {/* Projects */}
         <motion.div
           ref={projRef}
           variants={rightItemVariants}
@@ -102,11 +120,10 @@ export function InfoMenu() {
         </motion.div>
       </motion.div>
 
-      {/* Horizontal expanding bottom nav */}
-      {/* Horizontal expanding bottom nav */}
+      {/* Mobile horizontal expanding nav */}
       <div className="fixed bottom-4 left-4 right-4 z-50 lg:hidden">
         <div className="flex items-center">
-          {/* Hamburger Button */}
+          {/* Toggle button */}
           <motion.button
             onClick={toggleMenu}
             className="w-12 h-12 rounded-full border border-green bg-background text-white shadow-lg flex items-center justify-center relative"
@@ -130,7 +147,7 @@ export function InfoMenu() {
             />
           </motion.button>
 
-          {/* Expanding Nav Items (directly beside toggle) */}
+          {/* Nav items */}
           <AnimatePresence>
             {menuOpen && (
               <motion.ul
