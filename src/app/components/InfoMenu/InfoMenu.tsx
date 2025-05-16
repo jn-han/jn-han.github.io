@@ -19,6 +19,9 @@ export function InfoMenu() {
   const expRef = useRef<HTMLDivElement>(null);
   const eduRef = useRef<HTMLDivElement>(null);
   const projRef = useRef<HTMLDivElement>(null);
+  const inViewExp = useInView(expRef, { amount: 0.5 });
+  const inViewEdu = useInView(eduRef, { amount: 0.5 });
+  const inViewProj = useInView(projRef, { amount: 0.5 });
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -65,25 +68,35 @@ export function InfoMenu() {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
-        {sectionIds.map((section) => {
-          const ref = refs[section];
-          const inView = useInView(ref, { amount: 0.5 });
+        <motion.div
+          ref={expRef}
+          variants={rightItemVariants}
+          initial="hidden"
+          animate={inViewExp ? "visible" : "hidden"}
+          className="lg:scroll-mt-32"
+        >
+          <ExperiencePage inView={inViewExp} />
+        </motion.div>
 
-          return (
-            <motion.div
-              key={section}
-              ref={ref}
-              variants={rightItemVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              className="lg:scroll-mt-32"
-            >
-              {section === "Experience" && <ExperiencePage inView={inView} />}
-              {section === "Education" && <EducationPage inView={inView} />}
-              {section === "Projects" && <ProjectPage inView={inView} />}
-            </motion.div>
-          );
-        })}
+        <motion.div
+          ref={eduRef}
+          variants={rightItemVariants}
+          initial="hidden"
+          animate={inViewEdu ? "visible" : "hidden"}
+          className="lg:scroll-mt-32"
+        >
+          <EducationPage inView={inViewEdu} />
+        </motion.div>
+
+        <motion.div
+          ref={projRef}
+          variants={rightItemVariants}
+          initial="hidden"
+          animate={inViewProj ? "visible" : "hidden"}
+          className="lg:scroll-mt-32"
+        >
+          <ProjectPage inView={inViewProj} />
+        </motion.div>
       </motion.div>
 
       {/* Horizontal expanding bottom nav */}
