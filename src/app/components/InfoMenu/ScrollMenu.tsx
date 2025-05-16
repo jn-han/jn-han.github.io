@@ -26,7 +26,7 @@ export function ScrollMenu({ refs, active, onSelect }: Props) {
       variants={menuContainerVariants}
       initial="hidden"
       animate={menuInView ? "visible" : "hidden"}
-      className="hidden lg:block w-1/4 text-white sticky top-32 self-start"
+      className="hidden lg:block text-white sticky top-32 self-start w-full"
     >
       {/* Title */}
       <motion.div
@@ -35,8 +35,11 @@ export function ScrollMenu({ refs, active, onSelect }: Props) {
         transition={{ duration: 0.6 }}
         className="mb-12"
       >
-        <h2 className="text-5xl">Joshua Nguyen</h2>
-        <h3 className="text-2xl text-slate">Software Developer</h3>
+        <h2 className="text-5xl text-green">Joshua Nguyen</h2>
+        <h3 className="text-2xl text-lightSlate">Software Developer</h3>
+        <p className="text-slate text-lg">
+          Passionate about all things tech and software development
+        </p>
       </motion.div>
 
       {/* Menu Items */}

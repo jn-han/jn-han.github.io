@@ -42,7 +42,7 @@ export function InfoMenu() {
     <section
       id="projects"
       className="flex flex-col lg:flex-row w-full items-start justify-between
-             px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 pt-6 sm:pt-10 lg:pt-32 pb-20"
+             px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 pt-8 sm:pt-10 lg:pt-32 pb-20"
     >
       {/* Mobile header (shows only on small screens) */}
       <motion.div
