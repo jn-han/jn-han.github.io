@@ -40,52 +40,48 @@ const EXPERIENCE = [
     location: "Vancouver, BC",
     date: "Feb 2025 – Present",
     responsibilities: [
-      "Contributing to software development initiatives in a research-driven healthcare environment.",
-      "Supporting bioinformatics and research teams with data management tools and backend infrastructure.",
+      "Redesigned 10+ user-facing interfaces in Figma to improve usability and accessibility across dermatology data workflows.",
+      "Implemented new UI components using React, TypeScript, and Bootstrap 5, reducing code redundancy by 30%.",
+      "Built and maintained backend functionality via an Express.js server, including API endpoints and SQL queries for global health datasets.",
+      "Collaborated in a lean team of 3 developers and researchers to deploy clinical tools meeting privacy and information security standards.",
+      "Led documentation and weekly technical updates to ensure compliance with ILDS and WHO healthcare data protocols.",
+    ],
+    skills: [
+      "React",
+      "TypeScript",
+      "Express.js",
+      "SQL",
+      "Bootstrap 5",
+      "CSS",
+      "Figma",
+      "Node.js",
+      "REST APIs",
+      "Git",
     ],
     link: "https://www.bccrc.ca/",
   },
   {
     company: "UBC BEST",
-    title: "M2M: Software Engineer",
+    title: "Software Engineer, Muscle 2 Movement",
     location: "Vancouver, BC",
     date: "Sep 2024 – Present",
     responsibilities: [
-      "Developing a mobile application using Dart and Flutter to support individuals with multiple sclerosis.",
-      "Collaborating in a cross-functional team of 8, emphasizing mentorship and peer learning.",
-      "Building core features for a commercial-ready app targeting widespread user adoption.",
-      "Writing scalable, efficient code for long-term maintainability and growth.",
+      "Developed and shipped core features for a cross-platform health tracking app using Flutter and Dart, supporting individuals with neurological and physical impairments",
+      "Built interactive Unity-based cognitive and motor skill games and integrated them into the Flutter app using platform channels.",
+      "Collaborated in a fast-paced, agile team of 8 (including clinical advisors and developers) with bi-weekly sprint reviews and shared code ownership.",
+      "Contributed to technical planning, UI design input, and backend API integration to ensure seamless user experience.",
+      "Maintained clean Git workflows and wrote unit-tested, production-ready code aligned with accessibility and healthcare compliance standards.",
+    ],
+    skills: [
+      "Flutter",
+      "Dart",
+      "Unity",
+      "Cross-Platform Engineering",
+      "REST APIs",
+      "Agile Development",
+      "Git",
     ],
     link: "https://www.linkedin.com/company/ubcbest/?originalSubdomain=ca",
-  },
-  {
-    company: "Aritzia",
-    location: "Vancouver, BC",
-    date: "June 2018 – Present",
-    subRoles: [
-      {
-        title: "Senior Inventory Associate",
-        date: "May 2022 – Present",
-        responsibilities: [
-          "Leading inventory operations and streamlining logistics in a high-volume retail environment.",
-        ],
-      },
-      {
-        title: "Inventory Associate",
-        date: "Aug 2021 – May 2022",
-        responsibilities: [
-          "Managed product restocking, system accuracy, and back-of-house flow.",
-        ],
-      },
-      {
-        title: "Boutique Associate",
-        date: "June 2018 – Aug 2021",
-        responsibilities: [
-          "Delivered personalized customer service while supporting daily store operations.",
-        ],
-      },
-    ],
-    link: "https://www.aritzia.com/en/aritzia/corporate-hub/corporate-landing",
   },
 ];
 
@@ -130,21 +126,17 @@ export function ExperiencePage({ inView }: Props) {
             </ul>
           )}
 
-          {exp.subRoles && (
-            <ul className="list-disc ml-5 mt-3 space-y-4 text-sm sm:text-base">
-              {exp.subRoles.map((role, i) => (
-                <li key={i}>
-                  <p className="font-medium">
-                    {role.title} ({role.date})
-                  </p>
-                  <ul className="list-disc ml-5 mt-1 space-y-1">
-                    {role.responsibilities.map((point, j) => (
-                      <li key={j}>{point}</li>
-                    ))}
-                  </ul>
-                </li>
+          {exp.skills && (
+            <div className="flex flex-wrap mt-2 sm:mt-3">
+              {exp.skills.map((skill, i) => (
+                <div
+                  key={i}
+                  className="w-fit px-3 py-1 m-1 bg-green bg-opacity-20 text-green rounded-full text-xs sm:text-sm"
+                >
+                  {skill}
+                </div>
               ))}
-            </ul>
+            </div>
           )}
         </motion.div>
       ))}
