@@ -40,7 +40,7 @@ const EXPERIENCE = [
     location: "Vancouver, BC",
     date: "Feb 2025 – Present",
     responsibilities: [
-      "Redesigned 10+ user-facing interfaces in Figma to improve usability and accessibility across dermatology data workflows.",
+      "Redesigned user-facing interfaces in Figma to improve usability and accessibility across dermatology data workflows.",
       "Implemented new UI components using React, TypeScript, and Bootstrap 5, reducing code redundancy by 30%.",
       "Built and maintained backend functionality via an Express.js server, including API endpoints and SQL queries for global health datasets.",
       "Collaborated in a lean team of 3 developers and researchers to deploy clinical tools meeting privacy and information security standards.",
