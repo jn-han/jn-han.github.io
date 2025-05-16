@@ -49,7 +49,7 @@ export function ScrollMenu({ refs, active, onSelect }: Props) {
             whileHover={{ x: 5 }}
             transition={{ duration: 0.15, ease: "linear" }}
             onClick={() => onSelect(section)}
-            className={`mb-4 p-3 cursor-pointer w-fit transition rounded-sm ${
+            className={`mb-4 p-3 cursor-pointer w-fit transition rounded-sm  ${
               isSelected(section)
                 ? "border-l-4 border-green"
                 : "border-l-4 border-transparent"

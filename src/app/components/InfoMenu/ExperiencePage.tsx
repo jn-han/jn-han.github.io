@@ -3,6 +3,36 @@ import React from "react";
 import { motion } from "framer-motion";
 import { rightItemVariants } from "../../types/variants";
 
+const containerVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.4,
+      ease: "linear",
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.4,
+      ease: "linear",
+    },
+  },
+};
+
+interface Props {
+  inView: boolean;
+}
+
 const EXPERIENCE = [
   {
     company: "BC Cancer",
@@ -59,29 +89,41 @@ const EXPERIENCE = [
   },
 ];
 
-export function ExperiencePage() {
+export function ExperiencePage({ inView }: Props) {
   return (
-    <div className="flex flex-col gap-4">
-      <h3 className="text-3xl font-semibold text-green">Experience</h3>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      className="flex flex-col gap-6 sm:gap-8"
+    >
+      <motion.h3
+        variants={itemVariants}
+        className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green"
+      >
+        Experience
+      </motion.h3>
 
       {EXPERIENCE.map((exp, idx) => (
         <motion.div
           key={idx}
-          variants={rightItemVariants}
+          variants={itemVariants}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.15, ease: "linear" }}
           onClick={() => window.open(exp.link, "_blank", "noopener,noreferrer")}
-          className="flex flex-col gap-2 p-5 border-lightSlate bg-background border-2 rounded-lg cursor-pointer"
+          className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 border-lightSlate bg-background border-2 rounded-lg cursor-pointer"
         >
-          <p className="text-lg text-lightSlate">{exp.date}</p>
-          <p className="text-2xl font-semibold">{exp.title || exp.company}</p>
-          <p className="text-lg italic text-slate">
+          <p className="text-sm sm:text-base text-lightSlate">{exp.date}</p>
+          <p className="text-xl sm:text-2xl lg:text-3xl font-semibold">
+            {exp.title || exp.company}
+          </p>
+          <p className="text-sm sm:text-base italic text-slate">
             {exp.company}
             {exp.title && ` · ${exp.location}`}
           </p>
 
           {exp.responsibilities && (
-            <ul className="list-disc ml-5 mt-2 space-y-1 text-sm md:text-base">
+            <ul className="list-disc ml-5 mt-1 sm:mt-2 space-y-1 text-sm sm:text-base">
               {exp.responsibilities.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
@@ -89,13 +131,13 @@ export function ExperiencePage() {
           )}
 
           {exp.subRoles && (
-            <ul className="list-disc ml-5 mt-3 space-y-4 text-sm md:text-base">
+            <ul className="list-disc ml-5 mt-3 space-y-4 text-sm sm:text-base">
               {exp.subRoles.map((role, i) => (
                 <li key={i}>
                   <p className="font-medium">
                     {role.title} ({role.date})
                   </p>
-                  <ul className="list-disc ml-5 space-y-1 mt-1">
+                  <ul className="list-disc ml-5 mt-1 space-y-1">
                     {role.responsibilities.map((point, j) => (
                       <li key={j}>{point}</li>
                     ))}
@@ -106,6 +148,6 @@ export function ExperiencePage() {
           )}
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
