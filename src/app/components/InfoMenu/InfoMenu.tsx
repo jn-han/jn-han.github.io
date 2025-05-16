@@ -42,17 +42,20 @@ export function InfoMenu() {
     <section
       id="projects"
       className="flex flex-col lg:flex-row w-full items-start justify-between
-             px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 pt-32 pb-32"
+             px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 pt-6 sm:pt-10 lg:pt-32 pb-20"
     >
       {/* Mobile header (shows only on small screens) */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className="block lg:hidden mb-12"
+        className="block lg:hidden"
       >
-        <h2 className="text-2xl text-lightSlate">Joshua Nguyen</h2>
-        <h3 className="text-xl text-slate">Software Developer</h3>
+        <h2 className="text-3xl text-green">Joshua Nguyen</h2>
+        <h3 className="text-lg text-lightSlate">Software Developer</h3>
+        <p className="text-slate">
+          Passionate about all things tech and software development
+        </p>
       </motion.div>
 
       {/* Left sticky menu (hidden on small screens) */}
