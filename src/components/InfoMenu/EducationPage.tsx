@@ -40,7 +40,7 @@ export function EducationPage({ inView }: Props) {
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="flex flex-col gap-6 sm:gap-8"
+      className="flex flex-col gap-6 sm:gap-8 min-h-screen"
     >
       <motion.h3
         variants={itemVariants}

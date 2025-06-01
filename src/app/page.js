@@ -1,7 +1,5 @@
 "use client";
-import Taskbar from "./components/Taskbar";
-import HomePage from "./components/HomePage/HomePage";
-import { InfoMenu } from "./components/InfoMenu/InfoMenu";
+import { InfoMenu } from "../components/InfoMenu/InfoMenu";
 import { config } from "@fortawesome/fontawesome-svg-core";
 // import { useGradient } from "../../contexts/GradientContexts";
 import { useDarkMode } from "../../contexts/DarkModeContexts";

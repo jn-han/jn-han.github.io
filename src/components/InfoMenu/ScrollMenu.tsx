@@ -9,12 +9,11 @@ import {
 } from "../../types/variants";
 
 interface Props {
-  refs: Record<SectionId, React.RefObject<HTMLDivElement>>;
   active: SectionId | null;
   onSelect: (id: SectionId) => void;
 }
 
-export function ScrollMenu({ refs, active, onSelect }: Props) {
+export function ScrollMenu({ active, onSelect }: Props) {
   const menuRef = React.useRef(null);
   const menuInView = useInView(menuRef, { amount: 0.4 });
 
@@ -43,25 +42,28 @@ export function ScrollMenu({ refs, active, onSelect }: Props) {
       </motion.div>
 
       {/* Menu Items */}
-      {sectionIds.map((section) => {
-        const targetRef = refs[section];
-        return (
-          <motion.div
-            key={section}
-            variants={menuItemVariants}
-            whileHover={{ x: 5 }}
-            transition={{ duration: 0.15, ease: "linear" }}
-            onClick={() => onSelect(section)}
-            className={`mb-4 p-3 cursor-pointer w-fit transition rounded-sm  ${
-              isSelected(section)
-                ? "border-l-4 border-green"
-                : "border-l-4 border-transparent"
+      {sectionIds.map((section) => (
+        <motion.div
+          key={section}
+          variants={menuItemVariants}
+          whileHover={{ x: 5 }}
+          transition={{ duration: 0.15, ease: "linear" }}
+          onClick={() => onSelect(section)}
+          className={`mb-4 p-3 cursor-pointer w-fit transition rounded-sm  ${
+            isSelected(section)
+              ? "border-l-4 border-green"
+              : "border-l-4 border-transparent"
+          }`}
+        >
+          <p
+            className={`text-lg transition ${
+              isSelected(section) ? "text-green" : "hover:text-green"
             }`}
           >
-            <p className="text-lg hover:text-green transition">{section}</p>
-          </motion.div>
-        );
-      })}
+            {section}
+          </p>
+        </motion.div>
+      ))}
     </motion.div>
   );
 }

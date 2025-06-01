@@ -1,6 +1,5 @@
-"use client";
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ScrollMenu } from "./ScrollMenu";
 import { ExperiencePage } from "./ExperiencePage";
 import { EducationPage } from "./EducationPage";
@@ -11,46 +10,34 @@ import {
   rightContainerVariants,
   rightItemVariants,
 } from "../../types/variants";
-import { useActiveSection } from "./ActiveSectionManager/types";
 
-// Hook to detect if screen is large (lg: 1024px)
 function useIsLgUp() {
   const [isLgUp, setIsLgUp] = useState(false);
-
-  useEffect(() => {
+  React.useEffect(() => {
     const check = () => setIsLgUp(window.innerWidth >= 1024);
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
-
   return isLgUp;
 }
 
 export function InfoMenu() {
-  const expRef = useRef<HTMLDivElement>(null);
-  const eduRef = useRef<HTMLDivElement>(null);
-  const projRef = useRef<HTMLDivElement>(null);
-
-  const inViewExp = useInView(expRef, { amount: 0.5 });
-  const inViewEdu = useInView(eduRef, { amount: 0.5 });
-  const inViewProj = useInView(projRef, { amount: 0.5 });
-
+  const [activeSection, setActiveSection] = useState<SectionId>("Experience");
+  const [menuOpen, setMenuOpen] = useState(false);
   const isLgUp = useIsLgUp();
 
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-
-  const refs: Record<SectionId, React.RefObject<HTMLDivElement>> = {
-    Experience: expRef,
-    Education: eduRef,
-    Projects: projRef,
+  // On menu click, change active section and close mobile menu if open
+  const handleSectionSelect = (id: SectionId) => {
+    setActiveSection(id);
+    setMenuOpen(false);
   };
 
-  const activeSection = useActiveSection(expRef, eduRef, projRef);
-
-  const scrollTo = (id: SectionId) => {
-    refs[id].current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  // For tab content switching
+  const sectionComponents: Record<SectionId, React.ReactNode> = {
+    Experience: <ExperiencePage inView={true} />,
+    Education: <EducationPage inView={true} />,
+    Projects: <ProjectPage inView={true} />,
   };
 
   return (
@@ -75,49 +62,28 @@ export function InfoMenu() {
 
       {/* Left sticky nav for large screens */}
       <div className="hidden lg:sticky lg:top-32 lg:block lg:w-1/4">
-        <ScrollMenu refs={refs} active={activeSection} onSelect={scrollTo} />
+        <ScrollMenu active={activeSection} onSelect={handleSectionSelect} />
       </div>
 
-      {/* Right content area */}
+      {/* Right: Only show the selected section */}
       <motion.div
         className="w-full lg:w-4/6 text-white flex flex-col pr-0 lg:pr-4 gap-24 mt-10 lg:mt-0"
         variants={rightContainerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
+        animate="visible"
       >
-        {/* Experience */}
-        <motion.div
-          ref={expRef}
-          variants={rightItemVariants}
-          initial="hidden"
-          animate={isLgUp ? (inViewExp ? "visible" : "hidden") : "visible"}
-          className="scroll-mt-32"
-        >
-          <ExperiencePage inView={isLgUp ? inViewExp : true} />
-        </motion.div>
-
-        {/* Education */}
-        <motion.div
-          ref={eduRef}
-          variants={rightItemVariants}
-          initial="hidden"
-          animate={inViewEdu ? "visible" : "hidden"}
-          className="lg:scroll-mt-32"
-        >
-          <EducationPage inView={inViewEdu} />
-        </motion.div>
-
-        {/* Projects */}
-        <motion.div
-          ref={projRef}
-          variants={rightItemVariants}
-          initial="hidden"
-          animate={inViewProj ? "visible" : "hidden"}
-          className="lg:scroll-mt-32"
-        >
-          <ProjectPage inView={inViewProj} />
-        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSection}
+            variants={rightItemVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="w-full"
+          >
+            {sectionComponents[activeSection]}
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
 
       {/* Mobile horizontal expanding nav */}
@@ -125,7 +91,7 @@ export function InfoMenu() {
         <div className="flex items-center">
           {/* Toggle button */}
           <motion.button
-            onClick={toggleMenu}
+            onClick={() => setMenuOpen((prev) => !prev)}
             className="w-12 h-12 rounded-full border border-green bg-background text-white shadow-lg flex items-center justify-center relative"
             whileTap={{ scale: 0.95 }}
           >
@@ -174,11 +140,10 @@ export function InfoMenu() {
                     }}
                   >
                     <button
-                      onClick={() => {
-                        scrollTo(id);
-                        setMenuOpen(false);
-                      }}
-                      className="px-4 py-2 rounded-full border bg-background border-lightSlate text-green shadow-md text-sm capitalize whitespace-nowrap"
+                      onClick={() => handleSectionSelect(id)}
+                      className={`px-4 py-2 rounded-full border bg-background border-lightSlate text-green shadow-md text-sm capitalize whitespace-nowrap ${
+                        activeSection === id ? "font-bold border-green" : ""
+                      }`}
                     >
                       {id}
                     </button>

@@ -3,7 +3,7 @@ import { React, useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
-import PROJECTS from "../config/allProjects-config";
+import PROJECTS from "../../config/allProjects-config";
 // import { useGradient } from "../../../contexts/GradientContexts";
 
 const page = () => {
