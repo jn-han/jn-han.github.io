@@ -10,7 +10,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-// Subsections under Projects
 const projectSubsections: SectionId[] = ["Personal Projects", "Hackathons"];
 
 interface Props {
@@ -24,14 +23,13 @@ export function ScrollMenu({ active, onSelect }: Props) {
 
   const isSelected = (section: SectionId) => active === section;
 
-  // Scroll to anchor on the page (if it exists)
   const handleSubsectionClick = (sub: SectionId) => {
     const anchor = document.getElementById(
       sub.replace(/\s/g, "-").toLowerCase()
     );
     if (anchor) {
       anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-      onSelect("Projects"); // Optional: set active to Projects
+      onSelect("Projects");
     }
   };
 
