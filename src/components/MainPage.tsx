@@ -14,18 +14,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function useIsLgUp() {
-  const [isLgUp, setIsLgUp] = useState(false);
-  React.useEffect(() => {
-    const check = () => setIsLgUp(window.innerWidth >= 1024);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-  return isLgUp;
-}
-
-export function InfoMenu() {
+export function MainPage() {
   const [activeSection, setActiveSection] = useState<SectionId>("Experience");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,6 +27,8 @@ export function InfoMenu() {
     Experience: <ExperiencePage inView={true} />,
     Education: <EducationPage inView={true} />,
     Projects: <ProjectPage inView={true} />,
+    Hackathons: null,
+    "Personal Projects": null,
   };
 
   return (

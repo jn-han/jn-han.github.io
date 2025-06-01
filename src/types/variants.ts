@@ -41,4 +41,10 @@ export const rightItemVariants = {
 };
 
 export const sectionIds = ["Experience", "Education", "Projects"] as const;
-export type SectionId = (typeof sectionIds)[number];
+
+export type SectionId =
+  | "Experience"
+  | "Education"
+  | "Projects"
+  | "Personal Projects"
+  | "Hackathons";
