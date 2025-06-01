@@ -61,7 +61,7 @@ export function InfoMenu() {
         {/* Social icons - Mobile only */}
         <div className="flex gap-4 mt-3 lg:hidden">
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/jn-han"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -71,7 +71,7 @@ export function InfoMenu() {
             />
           </a>
           <a
-            href="https://linkedin.com/in/yourlinkedin"
+            href="https://linkedin.com/in/jn-han"
             target="_blank"
             rel="noopener noreferrer"
           >
