@@ -1,7 +1,8 @@
+// EducationPage.tsx
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import PROJECTS from "../../config/projects-config";
+import EDUCATION from "../config/education-config";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -40 },
@@ -33,7 +34,7 @@ interface Props {
   inView: boolean;
 }
 
-export function ProjectPage({ inView }: Props) {
+export function EducationPage({ inView }: Props) {
   return (
     <motion.div
       variants={containerVariants}
@@ -45,36 +46,37 @@ export function ProjectPage({ inView }: Props) {
         variants={itemVariants}
         className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green"
       >
-        Projects
+        Education
       </motion.h3>
 
-      {PROJECTS.map((item, index) => (
+      {EDUCATION.map((item, index) => (
         <motion.div
           key={index}
+          variants={itemVariants}
           onClick={() =>
             window.open(item.link, "_blank", "noopener,noreferrer")
           }
-          variants={itemVariants}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.15, ease: "linear" }}
           className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 border-lightSlate bg-background border-2 rounded-lg cursor-pointer"
         >
-          <p className="text-sm sm:text-base text-lightSlate">{item.date}</p>
+          <p className="text-sm sm:text-base text-lightSlate">
+            {item.graduationDate}
+          </p>
           <p className="text-xl sm:text-2xl lg:text-3xl font-semibold">
             {item.name}
           </p>
           <p className="text-sm sm:text-base italic text-slate">
-            {item.place} – {item.award}
+            {item.degree}
           </p>
-          <p className="text-sm sm:text-base text-white">{item.description}</p>
 
           <div className="flex flex-wrap mt-2 sm:mt-3">
-            {item.builtWith.map((tech, i) => (
+            {item.relevantWork.map((work, i) => (
               <div
                 key={i}
                 className="w-fit px-3 py-1 m-1 bg-green bg-opacity-20 text-green rounded-full text-xs sm:text-sm"
               >
-                {tech}
+                {work}
               </div>
             ))}
           </div>

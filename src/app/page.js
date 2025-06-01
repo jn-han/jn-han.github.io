@@ -1,5 +1,5 @@
 "use client";
-import { InfoMenu } from "../components/InfoMenu/InfoMenu";
+import { InfoMenu } from "../components/InfoMenu";
 import { config } from "@fortawesome/fontawesome-svg-core";
 // import { useGradient } from "../../contexts/GradientContexts";
 import { useDarkMode } from "../../contexts/DarkModeContexts";
@@ -18,7 +18,7 @@ export default function Home() {
           className="absolute inset-0 pointer-events-none transition-all duration-100"
         />
 
-        <div className="relative z-10">
+        <div className="relative z-10 min-h-screen">
           <InfoMenu />
         </div>
       </main>

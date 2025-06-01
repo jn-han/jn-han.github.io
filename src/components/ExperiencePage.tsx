@@ -1,8 +1,7 @@
-// EducationPage.tsx
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import EDUCATION from "../../config/education-config";
+import EXPERIENCE from "../config/experience-config";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -40 },
@@ -34,52 +33,59 @@ interface Props {
   inView: boolean;
 }
 
-export function EducationPage({ inView }: Props) {
+export function ExperiencePage({ inView }: Props) {
   return (
     <motion.div
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="flex flex-col gap-6 sm:gap-8 min-h-screen"
+      className="flex flex-col gap-6 sm:gap-8"
     >
       <motion.h3
         variants={itemVariants}
         className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green"
       >
-        Education
+        Experience
       </motion.h3>
 
-      {EDUCATION.map((item, index) => (
+      {EXPERIENCE.map((exp, idx) => (
         <motion.div
-          key={index}
+          key={idx}
           variants={itemVariants}
-          onClick={() =>
-            window.open(item.link, "_blank", "noopener,noreferrer")
-          }
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.15, ease: "linear" }}
+          onClick={() => window.open(exp.link, "_blank", "noopener,noreferrer")}
           className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 border-lightSlate bg-background border-2 rounded-lg cursor-pointer"
         >
-          <p className="text-sm sm:text-base text-lightSlate">
-            {item.graduationDate}
-          </p>
+          <p className="text-sm sm:text-base text-lightSlate">{exp.date}</p>
           <p className="text-xl sm:text-2xl lg:text-3xl font-semibold">
-            {item.name}
+            {exp.title || exp.company}
           </p>
           <p className="text-sm sm:text-base italic text-slate">
-            {item.degree}
+            {exp.company}
+            {exp.title && ` · ${exp.location}`}
           </p>
 
-          <div className="flex flex-wrap mt-2 sm:mt-3">
-            {item.relevantWork.map((work, i) => (
-              <div
-                key={i}
-                className="w-fit px-3 py-1 m-1 bg-green bg-opacity-20 text-green rounded-full text-xs sm:text-sm"
-              >
-                {work}
-              </div>
-            ))}
-          </div>
+          {exp.responsibilities && (
+            <ul className="list-disc ml-5 mt-1 sm:mt-2 space-y-1 text-sm sm:text-base">
+              {exp.responsibilities.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          )}
+
+          {exp.skills && (
+            <div className="flex flex-wrap mt-2 sm:mt-3">
+              {exp.skills.map((skill, i) => (
+                <div
+                  key={i}
+                  className="w-fit px-3 py-1 m-1 bg-green bg-opacity-20 text-green rounded-full text-xs sm:text-sm"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          )}
         </motion.div>
       ))}
     </motion.div>

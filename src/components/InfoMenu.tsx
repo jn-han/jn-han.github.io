@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollMenu } from "./ScrollMenu";
@@ -9,7 +10,9 @@ import {
   SectionId,
   rightContainerVariants,
   rightItemVariants,
-} from "../../types/variants";
+} from "../types/variants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function useIsLgUp() {
   const [isLgUp, setIsLgUp] = useState(false);
@@ -25,15 +28,12 @@ function useIsLgUp() {
 export function InfoMenu() {
   const [activeSection, setActiveSection] = useState<SectionId>("Experience");
   const [menuOpen, setMenuOpen] = useState(false);
-  const isLgUp = useIsLgUp();
 
-  // On menu click, change active section and close mobile menu if open
   const handleSectionSelect = (id: SectionId) => {
     setActiveSection(id);
     setMenuOpen(false);
   };
 
-  // For tab content switching
   const sectionComponents: Record<SectionId, React.ReactNode> = {
     Experience: <ExperiencePage inView={true} />,
     Education: <EducationPage inView={true} />,
@@ -58,13 +58,34 @@ export function InfoMenu() {
         <p className="text-slate">
           Passionate about all things tech and software development
         </p>
+        {/* Social icons - Mobile only */}
+        <div className="flex gap-4 mt-3 lg:hidden">
+          <a
+            href="https://github.com/yourgithub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="text-2xl text-slate hover:text-green transition"
+            />
+          </a>
+          <a
+            href="https://linkedin.com/in/yourlinkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="text-2xl text-slate hover:text-green transition"
+            />
+          </a>
+        </div>
       </motion.div>
-
       {/* Left sticky nav for large screens */}
       <div className="hidden lg:sticky lg:top-32 lg:block lg:w-1/4">
         <ScrollMenu active={activeSection} onSelect={handleSectionSelect} />
       </div>
-
       {/* Right: Only show the selected section */}
       <motion.div
         className="w-full lg:w-4/6 text-white flex flex-col pr-0 lg:pr-4 gap-24 mt-10 lg:mt-0"
@@ -85,7 +106,6 @@ export function InfoMenu() {
           </motion.div>
         </AnimatePresence>
       </motion.div>
-
       {/* Mobile horizontal expanding nav */}
       <div className="fixed bottom-4 left-4 right-4 z-50 lg:hidden">
         <div className="flex items-center">

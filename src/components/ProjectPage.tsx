@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { rightItemVariants } from "../../types/variants";
-import EXPERIENCE from "../../config/experience-config";
+import PROJECTS from "../config/projects-config";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -40 },
@@ -34,7 +33,7 @@ interface Props {
   inView: boolean;
 }
 
-export function ExperiencePage({ inView }: Props) {
+export function ProjectPage({ inView }: Props) {
   return (
     <motion.div
       variants={containerVariants}
@@ -46,47 +45,39 @@ export function ExperiencePage({ inView }: Props) {
         variants={itemVariants}
         className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green"
       >
-        Experience
+        Projects
       </motion.h3>
 
-      {EXPERIENCE.map((exp, idx) => (
+      {PROJECTS.map((item, index) => (
         <motion.div
-          key={idx}
+          key={index}
+          onClick={() =>
+            window.open(item.link, "_blank", "noopener,noreferrer")
+          }
           variants={itemVariants}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.15, ease: "linear" }}
-          onClick={() => window.open(exp.link, "_blank", "noopener,noreferrer")}
           className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 border-lightSlate bg-background border-2 rounded-lg cursor-pointer"
         >
-          <p className="text-sm sm:text-base text-lightSlate">{exp.date}</p>
+          <p className="text-sm sm:text-base text-lightSlate">{item.date}</p>
           <p className="text-xl sm:text-2xl lg:text-3xl font-semibold">
-            {exp.title || exp.company}
+            {item.name}
           </p>
           <p className="text-sm sm:text-base italic text-slate">
-            {exp.company}
-            {exp.title && ` · ${exp.location}`}
+            {item.place} – {item.award}
           </p>
+          <p className="text-sm sm:text-base text-white">{item.description}</p>
 
-          {exp.responsibilities && (
-            <ul className="list-disc ml-5 mt-1 sm:mt-2 space-y-1 text-sm sm:text-base">
-              {exp.responsibilities.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          )}
-
-          {exp.skills && (
-            <div className="flex flex-wrap mt-2 sm:mt-3">
-              {exp.skills.map((skill, i) => (
-                <div
-                  key={i}
-                  className="w-fit px-3 py-1 m-1 bg-green bg-opacity-20 text-green rounded-full text-xs sm:text-sm"
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="flex flex-wrap mt-2 sm:mt-3">
+            {item.builtWith.map((tech, i) => (
+              <div
+                key={i}
+                className="w-fit px-3 py-1 m-1 bg-green bg-opacity-20 text-green rounded-full text-xs sm:text-sm"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
         </motion.div>
       ))}
     </motion.div>
