@@ -1,3 +1,8 @@
+import kizuna from "../animations/kizuna.json";
+import inteflow from "../animations/inteflow.json";
+import plotgen from "../animations/plotgen.json";
+import freyt from "../animations/freyt.json";
+
 const PROJECTS = [
   {
     isHackathon: true,
@@ -14,7 +19,7 @@ const PROJECTS = [
       "BentoML",
       "Stable Diffusion",
     ],
-    src: "/plotgen.jpeg",
+    src: plotgen,
     link: "https://devpost.com/software/plotgen",
   },
   {
@@ -33,7 +38,7 @@ const PROJECTS = [
       "Decentralized Tech",
       "LPT",
     ],
-    src: "/kizuna.jpeg",
+    src: kizuna,
     link: "https://devpost.com/software/kizuna-gevr8p",
   },
   {
@@ -45,7 +50,7 @@ const PROJECTS = [
       "'inteflow' is an iOS mobile app designed to streamline your math problem-solving experience. It's your personal problem-solving companion that scans both formula and text-based math problems. Once scanned, inteflow breaks down these problems, offering detailed explanations that guide you to the solution through a chatbot. It also offers a wide range of supplementary resources, curated practice problems and textbooks to aid in reinforcing your understanding.",
     award: "Finalist",
     builtWith: ["Swift", "SwiftUI", "Xcode", "OpenAI"],
-    src: "/inteflow.jpeg",
+    src: inteflow,
     link: "https://devpost.com/software/inteflow",
   },
   {
@@ -57,7 +62,7 @@ const PROJECTS = [
       "Drawing on my hands-on experience in shipping and receiving logistics at Aritzia, I developed Freyt to streamline and optimize retail logistics operations. Freyt enables businesses to efficiently track, log, and visualize essential key performance indicators (KPIs) related to shipping and receiving. By providing actionable insights and clear data visualizations, the platform empowers managers to identify operational bottlenecks, uncover process improvement opportunities, and recognize high-performing employees. Over time, Freyt aims to support data-driven decision making, helping retail teams enhance productivity, drive accountability, and continuously improve their logistics workflows.",
     award: "",
     builtWith: ["NextJS", "JavaScript", "Tailwind", "MongoDB"],
-    src: "/inteflow.jpeg",
+    src: freyt,
     link: "https://devpost.com/software/inteflow",
   },
   {
@@ -69,7 +74,7 @@ const PROJECTS = [
       "After years of playing competitive volleyball, I noticed a significant gap: there was no user-friendly digital platform for organizing and managing tournament draws for both organizers and players. This inspired me to develop an all-in-one application tailored to the needs of volleyball leagues and tournaments.",
     award: "",
     builtWith: ["NextJS", "REST", "Tailwind"],
-    src: "/inteflow.jpeg",
+    src: kizuna,
     link: "/notes",
     // The app streamlines the entire tournament experience. Organizers can easily communicate essential information, such as court assignments, schedules, and venue details. Players, in turn, can log their match results through a peer verification system, ensuring that scores are accurate and mutually agreed upon. The platform then automatically updates court availability, tracks which teams advance or are eliminated, and provides real-time updates for all participants. The result is a transparent, efficient, and intuitive tool designed to simplify volleyball event management for everyone involved.
   },
@@ -82,7 +87,7 @@ const PROJECTS = [
       "As one of my first personal projects, I developed and continue to maintain a website for my father's company, Beyond Electric, based in the Lower Mainland of British Columbia. The primary motivation was to reduce business expenses by eliminating the need for costly website builders. By creating a custom solution, I was able to save my family’s company approximately 95% annually compared to their previous website costs.",
     award: "",
     builtWith: ["NextJS", "REST", "Tailwind"],
-    src: "/inteflow.jpeg",
+    src: kizuna,
     link: "https://devpost.com/software/inteflow",
   },
 ];
