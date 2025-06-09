@@ -2,6 +2,7 @@ import kizuna from "../animations/kizuna.json";
 import inteflow from "../animations/inteflow.json";
 import plotgen from "../animations/plotgen.json";
 import freyt from "../animations/freyt.json";
+import beyondElectric from "../animations/beyondElectric.json";
 
 const PROJECTS = [
   {
@@ -63,21 +64,21 @@ const PROJECTS = [
     award: "",
     builtWith: ["NextJS", "JavaScript", "Tailwind", "MongoDB"],
     src: freyt,
-    link: "https://devpost.com/software/inteflow",
-  },
-  {
-    isHackathon: false,
-    name: "Tournament Tracker",
-    date: "Just starting :)",
-    place: "",
-    description:
-      "After years of playing competitive volleyball, I noticed a significant gap: there was no user-friendly digital platform for organizing and managing tournament draws for both organizers and players. This inspired me to develop an all-in-one application tailored to the needs of volleyball leagues and tournaments.",
-    award: "",
-    builtWith: ["NextJS", "REST", "Tailwind"],
-    src: kizuna,
     link: "/notes",
-    // The app streamlines the entire tournament experience. Organizers can easily communicate essential information, such as court assignments, schedules, and venue details. Players, in turn, can log their match results through a peer verification system, ensuring that scores are accurate and mutually agreed upon. The platform then automatically updates court availability, tracks which teams advance or are eliminated, and provides real-time updates for all participants. The result is a transparent, efficient, and intuitive tool designed to simplify volleyball event management for everyone involved.
   },
+  // {
+  //   isHackathon: false,
+  //   name: "Tournament Tracker",
+  //   date: "Just starting :)",
+  //   place: "",
+  //   description:
+  //     "After years of playing competitive volleyball, I noticed a significant gap: there was no user-friendly digital platform for organizing and managing tournament draws for both organizers and players. This inspired me to develop an all-in-one application tailored to the needs of volleyball leagues and tournaments.",
+  //   award: "",
+  //   builtWith: ["NextJS", "REST", "Tailwind"],
+  //   src: kizuna,
+  //   link: "/notes",
+  //   // The app streamlines the entire tournament experience. Organizers can easily communicate essential information, such as court assignments, schedules, and venue details. Players, in turn, can log their match results through a peer verification system, ensuring that scores are accurate and mutually agreed upon. The platform then automatically updates court availability, tracks which teams advance or are eliminated, and provides real-time updates for all participants. The result is a transparent, efficient, and intuitive tool designed to simplify volleyball event management for everyone involved.
+  // },
   {
     isHackathon: false,
     name: "Beyond Electric",
@@ -87,8 +88,8 @@ const PROJECTS = [
       "As one of my first personal projects, I developed and continue to maintain a website for my father's company, Beyond Electric, based in the Lower Mainland of British Columbia. The primary motivation was to reduce business expenses by eliminating the need for costly website builders. By creating a custom solution, I was able to save my family’s company approximately 95% annually compared to their previous website costs.",
     award: "",
     builtWith: ["NextJS", "REST", "Tailwind"],
-    src: kizuna,
-    link: "https://devpost.com/software/inteflow",
+    src: beyondElectric,
+    link: "https://www.beyondelectric.ca",
   },
 ];
 
