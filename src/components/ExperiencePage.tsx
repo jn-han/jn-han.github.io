@@ -75,7 +75,7 @@ export function ExperiencePage({ inView }: Props) {
           )}
 
           {exp.skills && (
-            <div className="flex flex-wrap mt-2 sm:mt-3">
+            <div className="flex flex-wrap">
               {exp.skills.map((skill, i) => (
                 <div
                   key={i}
