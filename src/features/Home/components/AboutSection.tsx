@@ -17,14 +17,14 @@ export function AboutSection() {
             About
           </p>
 
-          <p className="mt-6 text-lg leading-relaxed text-muted">
+          <p className="mt-6 text-lg leading-relaxed text-muted lowercase">
             hi! my name is josh, a vancouver-based software developer who likes
             building clean, practical products. outside of work, i am usually
             deep into something I can tinker with, especially cars, computers,
             and other electronics
           </p>
 
-          <p className="mt-5 text-lg leading-relaxed text-muted">
+          <p className="mt-5 text-lg leading-relaxed text-muted lowercase">
             When I&apos;m not coding, you&apos;ll probably find me playing
             volleyball or walking about with my two goldendoodles, Obi and Arlo.
             Always happy to connect with people who enjoy building things,
