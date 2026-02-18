@@ -31,7 +31,7 @@ export function ContactSection() {
   const tileTap = { scale: 0.99 };
   const tileTransition = { duration: 0.2, ease: [0.22, 1, 0.36, 1] as const };
   const tileClassName =
-    "group glass-inset flex items-center gap-2.5 border border-lightSlate/75 p-4 text-sm font-medium text-ink/85 transition-colors duration-300 hover:border-accent/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70";
+    "group glass-inset flex min-w-0 items-center gap-2.5 border border-lightSlate/75 p-4 text-sm font-medium text-ink/85 transition-colors duration-300 hover:border-accent/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70";
   const hoverColorClass =
     "transition-colors duration-300 ease-out group-hover:text-accent";
   const hoverIconClass =
@@ -97,7 +97,7 @@ export function ContactSection() {
         viewport={{ once: true, amount: 0.2 }}
         className="mx-auto max-w-content px-6"
       >
-        <div className="glass-card p-8 sm:p-12">
+        <div className="glass-card p-5 sm:p-8 lg:p-12">
           <div className="pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full bg-accent/15 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-28 -left-20 h-56 w-56 rounded-full bg-ink/10 blur-3xl" />
           <div className="relative z-10 grid gap-10 lg:grid-cols-[1.08fr_1fr] lg:items-end">
@@ -117,7 +117,7 @@ export function ContactSection() {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-4">
+            <motion.div variants={itemVariants} className="min-w-0 space-y-4">
               <motion.button
                 type="button"
                 onClick={handleCopyEmail}
@@ -127,25 +127,26 @@ export function ContactSection() {
                 transition={tileTransition}
                 className={`${tileClassName} w-full justify-between text-left`}
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 flex-1 items-center gap-3">
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     className={`text-base text-ink/90 ${hoverIconClass}`}
                   />
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p
                       className={`text-xs uppercase tracking-[0.16em] text-ink/65 ${hoverColorClass}`}
                     >
                       Email
                     </p>
                     <p
-                      className={`text-sm font-semibold text-ink ${hoverColorClass}`}
+                      title={emailAddress}
+                      className={`min-w-0 truncate text-sm font-semibold text-ink ${hoverColorClass}`}
                     >
                       {emailAddress}
                     </p>
                   </div>
                 </div>
-                <span className="inline-flex min-w-[6.75rem] justify-end">
+                <span className="ml-3 inline-flex min-w-[5.25rem] shrink-0 justify-end sm:min-w-[6.75rem]">
                   <AnimatePresence mode="wait" initial={false}>
                     <motion.span
                       key={copyState}

@@ -106,7 +106,7 @@ export function HeroSection() {
             >
               joshua nguyen
               <span className="mt-2 block text-accent">
-                <span className="relative inline-flex min-h-[1.2em] min-w-[23ch] items-start">
+                <span className="relative inline-flex min-h-[1.2em] items-start">
                   <AnimatePresence mode="wait" initial={false}>
                     <motion.span
                       key={activeSlide.title}
@@ -114,7 +114,7 @@ export function HeroSection() {
                       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                       exit={{ opacity: 0, y: -18, filter: "blur(3px)" }}
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                      className="absolute left-0 top-0 whitespace-nowrap"
+                      className="absolute left-0 top-0 pr-1 text-4xl sm:text-6xl whitespace-nowrap sm:pr-0 sm:text-inherit"
                     >
                       {activeSlide.title}
                     </motion.span>
@@ -124,7 +124,7 @@ export function HeroSection() {
             </motion.h1>
             <motion.p
               variants={itemVariants}
-              className="mt-4 max-w-2xl text-xl leading-relaxed text-muted"
+              className="max-w-2xl text-xl leading-relaxed text-muted"
             >
               building thoughtful digital experiences
             </motion.p>
