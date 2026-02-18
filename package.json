@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
@@ -27,7 +28,8 @@
   },
   "devDependencies": {
     "@types/node": "20.8.3",
-    "@types/react": "18.2.25"
+    "@types/react": "18.2.25",
+    "typescript": "5.8.2"
   },
   "engines": {
     "node": ">=18.18.0"
