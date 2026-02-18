@@ -16,19 +16,19 @@ export function AboutSection() {
           <p className="text-xs uppercase tracking-[0.18em] text-muted">
             About
           </p>
+
           <p className="mt-6 text-lg leading-relaxed text-muted">
-            I&apos;m a software developer based in Vancouver with a strong
-            interest in building products that are both technically solid and
-            easy to use.
+            hi! my name is josh, a vancouver-based software developer who likes
+            building clean, practical products. outside of work, i am usually
+            deep into something I can tinker with, especially cars, computers,
+            and other electronics
           </p>
+
           <p className="mt-5 text-lg leading-relaxed text-muted">
-            My work sits at the intersection of engineering and design. I enjoy
-            solving complex problems, shaping user-facing details, and shipping
-            reliable software from concept to production.
-          </p>
-          <p className="mt-5 text-lg leading-relaxed text-muted">
-            Outside of coding, I spend time on side projects, new product ideas,
-            and exploring ways to improve team workflows.
+            When I&apos;m not coding, you&apos;ll probably find me playing
+            volleyball or walking about with my two goldendoodles, Obi and Arlo.
+            Always happy to connect with people who enjoy building things,
+            swapping car talk, or trading ideas.
           </p>
         </motion.div>
 
