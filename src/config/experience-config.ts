@@ -1,17 +1,11 @@
-const EXPERIENCE: {
-  company: string;
-  title?: string;
-  location?: string;
-  date: string;
-  responsibilities?: string[];
-  skills?: string[];
-  link: string;
-}[] = [
+import type { ExperienceItem } from "../types/content";
+
+const EXPERIENCE: ExperienceItem[] = [
   {
     company: "BC Cancer",
     title: "Software Developer + Research Assistant",
     location: "Vancouver, BC",
-    date: "Feb 2025 – Present",
+    date: "Feb 2025 - Present",
     responsibilities: [],
     skills: [
       "React",
@@ -31,7 +25,7 @@ const EXPERIENCE: {
     company: "UBC BEST",
     title: "Software Engineer, Muscle 2 Movement",
     location: "Vancouver, BC",
-    date: "Sep 2024 – Present",
+    date: "Sep 2024 - Present",
     responsibilities: [],
     skills: [
       "Flutter",
@@ -43,6 +37,25 @@ const EXPERIENCE: {
       "Git",
     ],
     link: "https://www.linkedin.com/company/ubcbest/?originalSubdomain=ca",
+  },
+];
+
+export const expertise = [
+  {
+    area: "Frontend",
+    stack: "React, Next.js, TypeScript, Tailwind CSS",
+  },
+  {
+    area: "Backend",
+    stack: "Node.js, Express.js, MongoDB, SQL",
+  },
+  {
+    area: "Tools",
+    stack: "Git, Docker, Figma, VSCode",
+  },
+  {
+    area: "Design",
+    stack: "UI/UX, Prototyping",
   },
 ];
 
