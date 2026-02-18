@@ -40,6 +40,7 @@ export function HeroSection() {
   const activeSlide = heroSlides[activeTitle];
   const activeLayout =
     HERO_PHOTO_LAYOUTS[activeTitle % HERO_PHOTO_LAYOUTS.length];
+  const isInitialSlide = activeTitle === 0;
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -47,6 +48,15 @@ export function HeroSection() {
     }, 2200);
 
     return () => window.clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    heroSlides.forEach((slide) => {
+      slide.images.forEach(({ src }) => {
+        const preloaded = new window.Image();
+        preloaded.src = src;
+      });
+    });
   }, []);
 
   const photoFigures = activeSlide.images.map((image, imageIndex) => {
@@ -71,6 +81,9 @@ export function HeroSection() {
           height={0}
           unoptimized
           sizes="(min-width: 1024px) 28rem, 70vw"
+          priority={isInitialSlide}
+          fetchPriority={isInitialSlide ? "high" : "auto"}
+          loading={isInitialSlide ? "eager" : "lazy"}
           className="block h-auto w-full"
         />
         <figcaption className="min-h-[1.9rem] pt-2 text-[0.7rem] font-medium lowercase leading-tight tracking-[0.14em] text-slate/85">
