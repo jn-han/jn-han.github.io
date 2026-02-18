@@ -50,12 +50,12 @@ export const heroSlides: HeroSlide[] = [
       {
         src: "/hack1.jpg",
         alt: "group photo",
-        caption: "hack the north, 2023",
+        caption: "nwHacks, 2023",
       },
       {
         src: "/hack2.jpg",
         alt: "group photo",
-        caption: "nwHacks, 2023",
+        caption: "hack the north, 2023",
       },
     ],
   },
@@ -99,7 +99,7 @@ export const heroSlides: HeroSlide[] = [
       },
       {
         src: "/dog2.jpg",
-        alt: "Two dogs playing outdoors",
+        alt: "Dog and Human standing in sun",
         caption: "Oreo + me @ VSC Meet 2023",
       },
     ],
